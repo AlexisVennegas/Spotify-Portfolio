@@ -1,0 +1,44 @@
+---
+
+import Home from '../Icons/Home.astro';
+import Search from '../Icons/Search.astro';
+---
+
+<div class="navegator">
+    <ul>
+        <li>
+            <Home  />
+            <a href="#">Inicio</a>
+        </li>
+        <li>
+            <Search />
+            <a href="#">Buscar</a>
+        </li>
+    </ul>
+</div>
+<style>
+    .navegator {
+		width: 334px;
+		height: 120px;
+		border-radius: 10px;
+		margin: 10px 0 ;
+		background-color:rgb(24 24 27)
+	}
+  
+    ul {
+        list-style: none;   
+        width: 100%;
+        cursor: pointer;    
+        height: 100%;   
+    }
+
+    li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+    }
+   
+  
+</style>
