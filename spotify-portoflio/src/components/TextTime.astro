@@ -1,0 +1,38 @@
+---
+// logica para mostrar el saludo de acuerdo a la hora del día
+const date = new Date();
+const hour = date.getHours();
+
+let greeting = '';
+
+if (hour >= 0 && hour < 12) {
+    greeting = 'Buenos días';
+} else if (hour >= 12 && hour < 18) {
+    greeting = 'Buenas tardes';
+} else {
+    greeting = 'Buenas noches';
+}
+
+---
+
+
+<section>
+    <p>{greeting}, bienvenido</p>
+</section>
+
+<style>
+    section {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+    }
+    p {
+        margin-left: 20px;
+        color: white;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.25rem;
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
