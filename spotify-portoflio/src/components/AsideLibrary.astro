@@ -5,13 +5,24 @@ interface Props {
 }
 
 const { id, title } = Astro.props;
-
+function getColor(id: number): string {
+  const colors: Record<number, string> = {
+    1: "rgb(208, 40, 56)",
+    2: "rgb(40, 208, 56)",
+    3: "rgb(56, 40, 208)",
+    4: "rgb(208, 208, 40)",
+  };
+  return colors[id] || "rgb(208, 40, 56)"; // Default color if id is not in the list
+}
+const backgroundColor = getColor(id);
 ---
-    <li>    
+    <li class="liListsongs">    
         <a href="#">
             <div class="cover">
                 <div class="top"></div>
-                <div class="bottom" style=" background-color: rgb(208, 40, 56);"></div>
+                <div class="bottom" style={`background-color: ${backgroundColor};`}>
+                    <img src={`./${title}.png`} alt="varios lenguajes de programacion"/>
+                </div>
             </div>
             <div class="info">
                 <h5>{title}</h5>
@@ -48,16 +59,25 @@ const { id, title } = Astro.props;
 
     .top {
         background-color: white;
-        height: 40%;
+        height: 50%;
         border-radius: 0.375rem 0.375rem 0 0 ;
     }
 
     .bottom {
-       
-        height: 60%;
+        position: relative;
+        height: 50%;
         border-radius: 0 0 0.375rem 0.375rem;
+    }
+    .bottom > img {
+        width: 75%;
+        border-radius: 0.375rem;
+        position: absolute;
+        transform: translate(-50%, -50%); /* Centra la imagen */
+        left: 50%;
+        mask-image: linear-gradient(black 80%, transparent); /* Efecto degradado */
     }
     .info {
         margin-left: 15px;
     }
+  
 </style>

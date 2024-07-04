@@ -5,6 +5,9 @@ import Layout from '../layouts/Layout.astro';
 import Navigator from '../components/Navigator.astro';
 import AsideList from '../components/AsideList.astro';
 import AsideLibrary from '../components/AsideLibrary.astro';
+import CardProjects from '../components/CardProjects.astro';
+import CardEducation from '../components/CardEducation.astro';
+
 
 ---
 
@@ -16,11 +19,11 @@ import AsideLibrary from '../components/AsideLibrary.astro';
 				<div class="list-songs">
 				<AsideList />
 				<ul>
-					<AsideLibrary id="1" title="Contact" />
-					<AsideLibrary id="2" title="Skills"/>
-					<AsideLibrary id="3" title="About" />
-					<AsideLibrary id="4" title="Projects" />
-					<AsideLibrary id="5" title="Education" />
+					<AsideLibrary id="1" title="Contacto" />
+					<AsideLibrary id="2" title="Habilidades"/>
+					<AsideLibrary id="3" title="Conoceme" />
+					<CardProjects id="4" title="Proyectos" />
+					<CardEducation id="5" title="Educacion" />
 				</ul>
 				</div>
 			</div>
@@ -109,4 +112,5 @@ import AsideLibrary from '../components/AsideLibrary.astro';
 		border-radius: 10px;
 		background-color:rgb(24 24 27);
 	}
+	
 </style>
