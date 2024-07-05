@@ -17,12 +17,9 @@ function getColor(id: number): string {
 const backgroundColor = getColor(id);
 ---
     <li class="liListsongs">    
-        <a href="#">
+        <a href={`./${title}`} >
             <div class="cover">
-                <div class="top"></div>
-                <div class="bottom" style={`background-color: ${backgroundColor};`}>
-                    <img src={`./${title}.png`} alt="varios lenguajes de programacion"/>
-                </div>
+                <img src={`./${title}.jpg`} alt="varios lenguajes de programacion"/>
             </div>
             <div class="info">
                 <h5>{title}</h5>
@@ -47,7 +44,7 @@ const backgroundColor = getColor(id);
         text-decoration: none;
         color: white;
         padding: 10px;
-        margin-left: 20px;
+        margin-left: 15px;
     }
     .cover {
         width: 45px; /* Puedes ajustar el tamaño según sea necesario */
@@ -57,24 +54,10 @@ const backgroundColor = getColor(id);
         border-radius: 0.375rem;
     }
 
-    .top {
-        background-color: white;
-        height: 50%;
-        border-radius: 0.375rem 0.375rem 0 0 ;
-    }
-
-    .bottom {
-        position: relative;
-        height: 50%;
-        border-radius: 0 0 0.375rem 0.375rem;
-    }
-    .bottom > img {
-        width: 75%;
+    .cover > img {
+        width: 100%;
+        height: 100%;
         border-radius: 0.375rem;
-        position: absolute;
-        transform: translate(-50%, -50%); /* Centra la imagen */
-        left: 50%;
-        mask-image: linear-gradient(black 80%, transparent); /* Efecto degradado */
     }
     .info {
         margin-left: 15px;

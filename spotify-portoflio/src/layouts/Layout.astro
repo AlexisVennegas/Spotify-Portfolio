@@ -17,10 +17,11 @@ import { ViewTransitions } from "astro:transitions"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions fallback="none" />
+	
 	</head>
 	<body>
 		<slot />
+		<ViewTransitions fallback="none" />
 	</body>
 </html>
 <style is:global>
@@ -46,7 +47,7 @@ import { ViewTransitions } from "astro:transitions"
 	svg {
     color: rgb(161 161 170 );
     margin: 0 20px 0 35px;
-}  
+	}  
 	.liListsongs {
 		border-radius: 10px;
 		width: 95%;
@@ -57,8 +58,17 @@ import { ViewTransitions } from "astro:transitions"
         background-color: rgb(39 39 42);
     }
 	article:hover {
-		transition: all 0.3s !important;
         background-color: rgb(39 39 42) !important;
     }
+	::-webkit-scrollbar {
+    width: 5px;
+	}
+	::-webkit-scrollbar-track {
+	}
+	::-webkit-scrollbar-thumb {
+	    background-color: white;
+		border-radius: 0px 0px 10px 0px
+	}
+
 
 </style>

@@ -3,12 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Navigator from '../components/Navigator.astro';
 import AsideList from '../components/AsideList.astro';
 import AsideLibrary from '../components/AsideLibrary.astro';
-import CardProjects from '../components/CardProjects.astro';
-import CardEducation from '../components/CardEducation.astro';
-import TextTime from '../components/TextTime.astro';
+
 import ContentArticle from '../components/ContentArticle.astro';
+import { Information } from "../Data/lib.js";
+
 
 const { id } = Astro.params
+console.log(`soy el id ${id}`)
+console.log(Information)
+// funcion para obtener el parrafo de la descripcion
+// Función para obtener la información por título
+function getInformationByTitle(title) {
+  return Information.find(item => item.title === title);
+}
+
+const info = getInformationByTitle(id);
+console.log(`soy la info ${JSON.stringify(info)}`);
+const parrafo = info ? info.description : 'Descripción no encontrada';
 ---
 
 <Layout title="Bienvenido a mi Portafolio">
@@ -20,20 +31,34 @@ const { id } = Astro.params
 				<AsideList />
 				<ul>
 					<AsideLibrary id="1" title="Contacto" />
-					<AsideLibrary id="2"     title="Habilidades"/>
+					<AsideLibrary id="2" title="Habilidades"/>
 					<AsideLibrary id="3" title="Conoceme" />
-					<CardProjects id="4" title="Proyectos" />
-					<CardEducation id="5" title="Educacion" />
+					<AsideLibrary id="4" title="Proyectos" />
+					<AsideLibrary id="5" title="Educacion" />
+					<AsideLibrary id="6" title="Nasa" />
+
 				</ul>
 				</div>
 			</div>
 			<div class="panel-center">
-				<div class="player" 
-					>
-				<TextTime />
-				<p
-				transition:name="textColor"
-				>{id}</p>
+				<div class="player"  >
+					<header>
+						<div class="pictureHeader">
+							<img src={`./${id}.jpg`} alt="imagen de articulo" transition:name=`Album-${id}` />
+						</div>
+						<div class="infoHeader">
+							<h2>Playlist</h2>
+							
+							<h1 class={`titleCard${id}-1`} 
+								transition:name=`titleCard${id}`
+							>{id}</h1>
+							<p
+								transition:name=`paragraph${id}`
+							>{parrafo}</p>
+						</div>
+					</header>
+					
+				
 				
 				</div>
 			</div>
@@ -122,4 +147,49 @@ const { id } = Astro.params
 	p {
 		color: white;
 	}	
+
+	header {
+		border: 1px solid red;
+		width: 100%;
+		height: 40%;
+		display: flex;
+	}
+	.pictureHeader {
+		margin-left: 25px;
+		width: auto;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.pictureHeader > img {
+		width: 90%;
+		height: 90%;
+	}
+	.infoHeader {
+		border: 1px solid white;
+		width: 80%;
+		height: 100%;
+	}
+	.infoHeader > h2 {
+		color: white;
+		font-size: 13px;
+		font-weight: 800;
+		font-family: 'Poppins', sans-serif;
+		margin: 50px 0 0px 50px
+	}
+	.infoHeader > h1 {
+		color: white;
+		font-size: 48px;
+		font-weight: 800;
+		font-family: 'Poppins', sans-serif;
+		margin: 0 0 0px 50px
+	}
+	.infoHeader > p {
+		color: rgb(161 161 170 );
+		font-size: 13px;
+		font-weight: 800;
+		font-family: 'Poppins', sans-serif;
+		margin: 20px 0 0px 50px
+	}
 </style>
