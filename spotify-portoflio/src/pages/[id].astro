@@ -8,7 +8,7 @@ import CardEducation from '../components/CardEducation.astro';
 import TextTime from '../components/TextTime.astro';
 import ContentArticle from '../components/ContentArticle.astro';
 
-
+const { id } = Astro.params
 ---
 
 <Layout title="Bienvenido a mi Portafolio">
@@ -20,7 +20,7 @@ import ContentArticle from '../components/ContentArticle.astro';
 				<AsideList />
 				<ul>
 					<AsideLibrary id="1" title="Contacto" />
-					<AsideLibrary id="2" title="Habilidades"/>
+					<AsideLibrary id="2"     title="Habilidades"/>
 					<AsideLibrary id="3" title="Conoceme" />
 					<CardProjects id="4" title="Proyectos" />
 					<CardEducation id="5" title="Educacion" />
@@ -28,8 +28,13 @@ import ContentArticle from '../components/ContentArticle.astro';
 				</div>
 			</div>
 			<div class="panel-center">
-				<div class="player">
-					<TextTime />
+				<div class="player" 
+					>
+				<TextTime />
+				<p
+				transition:name="textColor"
+				>{id}</p>
+				
 				</div>
 			</div>
 		</div>
@@ -82,7 +87,8 @@ import ContentArticle from '../components/ContentArticle.astro';
 		width: 99%;
 		height: auto;
 		border-radius: 10px;
-		background: linear-gradient(to bottom, #1db954b5,  rgb(24 24 27) 50%);
+        background-color: rgb(24 24 27);
+		/* background: linear-gradient(to bottom, #1db954b5,  rgb(24 24 27) 50%); */
 		margin-top: 10px;
 	}
 	.panel-under {
@@ -113,5 +119,7 @@ import ContentArticle from '../components/ContentArticle.astro';
 		border-radius: 10px;
 		background-color:rgb(24 24 27);
 	}
-	
+	p {
+		color: white;
+	}	
 </style>

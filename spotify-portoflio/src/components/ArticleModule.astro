@@ -6,20 +6,24 @@ interface Props {
 const { title } = Astro.props;
 ---
 
+<a href={title}
+ >
 <article>
-    <a href={title}>
         <div class="pictureArticle">
             <img src={`./${title}.jpg`} alt="imagen de articulo"/>
         </div>
         <div class="infoArticle">
-            <h4>{title}</h4>
+            <h4
+            transition:name="textColor"
+            >{title}</h4>
             <p>Alexis Venegas</p>
         </div>
 
-    </a>
-</article>
+    </article>
+</a>
 
 <style>
+  
     article {
         width: 176px;
         height: 236px;
@@ -47,6 +51,7 @@ const { title } = Astro.props;
         color: white;
         font-size: 1rem;
         line-height: 1.25rem;
+
     }
     .infoArticle > p {
         color:rgb(156 163 175);
