@@ -18,6 +18,23 @@ function getInformationByTitle(title) {
 
 const info = getInformationByTitle(id);
 const parrafo = info ? info.description : 'Descripción no encontrada';
+
+
+
+function getColor(id: string): string {
+  const colors: Record<number, string> = {
+    Contacto: "rgb(254,211,0)",
+    Habilidades: "rgb(218,31,32)",
+	Conoceme: "rgb(46,128,196)",
+	Proyectos: "rgb(55,0,93)",
+	Educacion: "rgb(223,183,0)",
+	Nasa: "rgb(1,0,16)",
+};
+  return colors[id] || "rgb(208, 40, 56)"; // Default color if id is not in the list
+}
+
+const backgroundColor = getColor(id);
+
 ---
 
 <Layout title="Bienvenido a mi Portafolio">
@@ -39,7 +56,8 @@ const parrafo = info ? info.description : 'Descripción no encontrada';
 				</div>
 			</div>
 			<div class="panel-center">
-				<div class="player"  >
+
+				<div class="player"  style={`background: linear-gradient(to bottom, ${backgroundColor},  rgb(24 24 27) 50%);`} >
 					<header>
 						<div class="pictureHeader">
 							<img src={`./${id}.jpg`} alt="imagen de articulo" transition:name=`Album-${id}` />
@@ -120,7 +138,7 @@ const parrafo = info ? info.description : 'Descripción no encontrada';
 		height: auto;
 		border-radius: 10px;
         background-color: rgb(24 24 27);
-		/* background: linear-gradient(to bottom, #1db954b5,  rgb(24 24 27) 50%); */
+		transition: background 0.5s;
 		margin-top: 10px;
 	}
 	.panel-under {
