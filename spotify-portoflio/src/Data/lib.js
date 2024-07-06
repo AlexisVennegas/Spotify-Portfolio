@@ -31,4 +31,10 @@ export const Information = [
     description: "Soy egresado de la carrera de Ingeniería en Sistemas Computacionales, en la Universidad Tecnológica de la Mixteca. Durante mi carrera académica, he participado en diversos proyectos de desarrollo de software, tanto en la universidad como de manera independiente.",
     imageUrl: "./Educacion.jpg",
   },
+  {
+    id: '6',
+    title: "Nasa",
+    description: "Este proyecto fue realizado como parte de la evaluación final del bootcamp de Henry. Se trata de una aplicación web que consume la API de la NASA, donde se pueden visualizar las imágenes del día, del mes y del año, además de buscar imágenes por fecha.",
+    imageUrl: "./Nasa.jpg",
+  }
 ];
