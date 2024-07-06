@@ -12,10 +12,11 @@ import Search from '../Icons/Search.astro';
                 Inicio
             </li>
         </a>
-        <a href="#">
-            <li>
+        <a>
+            <li id="search-li">
                 <Search />
-                Buscar
+                <p id="search-text" >Buscar</p>
+                <input id="search-input" type="search" placeholder="Buscar" />
             </li>
         </a>
     </ul>
@@ -44,6 +45,48 @@ import Search from '../Icons/Search.astro';
         margin: 0 auto;
         height: 50%;
     }
+    #search-input {
+        display: none;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        outline: none;
+    }   
+    /* quitamos todos los hover con outline o background white al input*/
+    #search-input:hover {
+        background-color: transparent !important;
+        outline: none !important;
+    }
    
   
 </style>
+<script>
+    const searchLi = document.getElementById('search-li');
+    const searchInput = document.getElementById('search-input');
+    const searchText = document.getElementById('search-text');
+    const ul = document.querySelector(".list-songs");
+
+    // evento button search
+    searchLi.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchInput.style.display = 'block';
+        searchText.style.display = 'none';
+    })
+   // vamos a filtrar la ul dependiendo lo que escriban en el input
+    searchInput.addEventListener('keyup', (e) => {
+        const term = e.target.value.toLowerCase();
+        const listSongs = document.querySelectorAll('.liListsongs');
+        Array.from(listSongs).forEach((listSongs) => {
+            const title = listSongs.textContent;
+            if (title.toLowerCase().indexOf(term) != -1) {
+                listSongs.style.display = 'block';
+            } else {
+                listSongs.style.display = 'none';
+            }
+        })
+    })  
+
+</script>
