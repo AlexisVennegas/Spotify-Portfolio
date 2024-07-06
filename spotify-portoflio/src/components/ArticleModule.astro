@@ -1,13 +1,12 @@
 ---
-interface Props {
-    title: string;
-}
 
-const { title } = Astro.props;
+
+
+import { Information } from "../Data/lib.js";
 ---
 
-<a href={title}    >
-<article>
+<!-- <a href={title}>
+    <article>
         <div class="pictureArticle">
             <img src={`./${title}.jpg`} alt="imagen de articulo" transition:name=`Album-${title}` />
             <button class="play-button">
@@ -22,7 +21,28 @@ const { title } = Astro.props;
         </div>
 
     </article>
-</a>
+</a> -->
+{
+    Information.map((item) => (
+    <a href={item.title}>
+    <article>
+        <div class="pictureArticle">
+            <img src={`./${item.title}.jpg`} alt="imagen de articulo" transition:name=`Album-${item.title}` />
+            <button class="play-button" transition:name=`Button-${item.title}`>
+                <svg class="svg-special" role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
+            </button>
+        </div>
+        <div class="infoArticle">
+            <h4 class={`titleCard${item.title}-1`} 
+                transition:name=`titleCard${item.title}`
+            >{item.title}</h4>
+            <p transition:name=`paragraph${item.title}`>Alexis Venegas</p>
+        </div>
+
+    </article>
+    </a>
+    ))
+}
 
 <style>
   
