@@ -1,10 +1,13 @@
 ---
 interface Props {
 	id: number;
-    title: string;
+
 }
 
-const { id, title } = Astro.props;
+const { id } = Astro.props;
+import { Information } from "../Data/lib.js";
+
+
 function getColor(id: number): string {
   const colors: Record<number, string> = {
     1: "rgb(208, 40, 56)",
@@ -16,7 +19,7 @@ function getColor(id: number): string {
 }
 const backgroundColor = getColor(id);
 ---
-    <li class="liListsongs">    
+    <!-- <li class="liListsongs">    
         <a href={`./${title}`} >
             <div class="cover">
                 <img src={`./${title}.jpg`} alt="varios lenguajes de programacion"/>
@@ -26,7 +29,22 @@ const backgroundColor = getColor(id);
                 <p>Artista</p>
             </div>
         </a>
-    </li>
+    </li> -->
+    {
+        Information.map((item) => (
+            <li class="liListsongs">    
+                <a href={`./${item.title}`} >
+                    <div class="cover">
+                        <img src={`./${item.title}.jpg`} alt="varios lenguajes de programacion"/>
+                    </div>
+                    <div class="info">
+                        <h5>{item.title}</h5>
+                        <p>Artista</p>
+                    </div>
+                </a>
+            </li>
+        ))
+    }
 
 
 <style>
