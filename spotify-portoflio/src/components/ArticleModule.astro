@@ -8,7 +8,7 @@ import { Information } from "../Data/lib.js";
 {
     Information.map((item) => (
     <a href={item.title}>
-    <article>
+    <article transition:name=`Article-${item.title}`>
         <div class="pictureArticle">
             <img src={`./${item.title}.jpg`} alt="imagen de articulo" transition:name=`Album-${item.title}` />
             <button class="play-button" transition:name=`Button-${item.title}`>
@@ -37,7 +37,7 @@ import { Information } from "../Data/lib.js";
         padding: 10px;
         margin-left: 20px;
         cursor: pointer;
-       
+        transition-duration: 300ms;
     }
     .pictureArticle {
         width: 100%;

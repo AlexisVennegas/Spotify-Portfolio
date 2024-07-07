@@ -18,6 +18,26 @@ function getColor(id: number): string {
   return colors[id] || "rgb(208, 40, 56)"; // Default color if id is not in the list
 }
 const backgroundColor = getColor(id);
+
+
+function GetTitle(title: string): string {
+    if (title === "Nasa")
+        return "Hackathon"
+    else if (title === "Habilidades")
+        return "Album"
+    else if (title === "Proyectos")
+        return "Album"
+    else if (title === "Educacion")
+        return "Album"
+    else if (title === "Experiencia")
+        return "Album"
+    else if (title === "Conoceme")
+        return "Alexis Venegas"
+    else 
+        return "Album"
+    }   
+
+
 ---
     <!-- <li class="liListsongs">    
         <a href={`./${title}`} >
@@ -39,7 +59,7 @@ const backgroundColor = getColor(id);
                     </div>
                     <div class="info">
                         <h5>{item.title}</h5>
-                        <p>Artista</p>
+                        <p>{GetTitle(item.title)}</p>
                     </div>
                 </a>
             </li>
