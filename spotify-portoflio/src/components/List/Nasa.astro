@@ -1,9 +1,10 @@
 ---
 import Slider from "./Slider.astro";
+import { Suspense } from "react";
 
 ---
 
-<section class="container-Nasa">
+<section class="container-Nasa" transition:persist>
     <div class="first-container-info">
         <div class="Article-info">
             <p><span>FireGuardian</span> es una aplicación innovadora diseñada para mejorar las capacidades de los bomberos y las autoridades en la prevención y detección rápida de incendios forestales. Nuestra misión es proporcionar un conjunto de herramientas integral que empodere a quienes están en primera línea de la gestión de incendios.
@@ -15,7 +16,9 @@ import Slider from "./Slider.astro";
         </div>
         
         <div class="information">  
-            <Slider />
+            <Suspense >
+                <Slider />
+            </Suspense>
         </div>
       
     
@@ -86,7 +89,7 @@ import Slider from "./Slider.astro";
     }
 </style>
 
-<script >
+<script  >
    const playButton = document.querySelector('.Article-info');
     playButton.addEventListener('click', () => {
         console.log("hola")
