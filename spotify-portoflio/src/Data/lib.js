@@ -34,7 +34,7 @@ export const Information = [
   {
     id: '6',
     title: "Nasa",
-    description: "Este proyecto fue realizado como parte de la evaluación final del bootcamp de Henry. Se trata de una aplicación web que consume la API de la NASA, donde se pueden visualizar las imágenes del día, del mes y del año, además de buscar imágenes por fecha.",
+    description: "Bienvenido a FireGuardian, una solución innovadora desarrollada como parte del desafío NASA Space Apps 2023: Gestión de incendios: aumento de las oportunidades de gestión de incendios basadas en la comunidad.",
     imageUrl: "./Nasa.jpg",
   }
 ];

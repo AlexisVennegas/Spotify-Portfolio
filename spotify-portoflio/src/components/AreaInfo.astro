@@ -7,11 +7,15 @@ import { Skills } from "../Data/lib.js";
 import { Projects } from "../Data/lib.js";
 import { Education } from "../Data/lib.js";
 import List from "./List/List.astro";
+import Nasa from "./List/Nasa.astro";
 import Reloj from "../Icons/Reloj.astro";
+
+const display = title === "Nasa" ? "none" : "flex";
+const widthContainer = title === "Nasa" ? "100%" : "90%";
 ---
 
-    <div class="playListOrder">
-      <header>
+    <div class="playListOrder" style={`width: ${widthContainer}`} >
+       <header style={`display: ${display}`} >
         <div class="">
           #
         </div>
@@ -43,8 +47,10 @@ import Reloj from "../Icons/Reloj.astro";
       Education.map((item, index) => (
         <List key={index} item={item} index={index} />
       ))
-    ) : null}
-    
+    ) : title === "Nasa" ? (
+      <Nasa />
+    ) : ""}
+
     </div>
 
 
