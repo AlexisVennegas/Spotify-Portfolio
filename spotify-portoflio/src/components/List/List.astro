@@ -1,0 +1,139 @@
+---
+interface Props {
+    title: string;
+    index: number;
+    item: {
+        imageUrl: string;
+        title: string;
+        description: string;
+        album: string;
+        time: string;
+    }
+}
+const { title, index, item } = Astro.props;
+import { Skills } from "../Data/lib.js";
+import SkillsList from "./List/SkillsList.astro";
+
+---
+
+<div class="containerData" >
+    <div class="">
+      {index + 1}
+    </div>
+    <div class="">
+      <picture>
+        <img src={item.imageUrl} alt={item.title} />
+      </picture>
+      <div class="information">
+        <h3 class="song-title">{item.title}</h3>
+        <p class="description">{item.description}</p> 
+      </div>
+        
+    </div>
+    <div class="">
+      {item.album}
+    </div>
+    <div class="">
+        Example
+    </div>
+    <div class="">
+      {item.time}
+    </div>
+  </div>
+  <style>
+     .containerData {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      margin: 4px 0;
+      cursor: pointer;
+      transition-duration: 300ms;
+      border-radius: 0.375rem;
+    }
+    .containerData:hover {
+      transition-duration: 300ms;
+      background-color: rgb(255 255 255 / 0.1);
+    }
+    .containerData > div:first-child{
+      /* border: 1px solid green; */
+      width: 5%;
+      height: 100%;
+      color: rgb(161 161 170 );
+      font-weight: 300;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-family: 'Circular Spotify Text', 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .containerData > div:nth-child(2){
+      width: 40%;
+      height: 100%;
+      color: rgb(161 161 170 );
+      font-weight: 300;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-family: 'Circular Spotify Text', 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+    }
+    .containerData > div:nth-child(3){
+      width: 25%;
+      height: 100%;
+      color: rgb(161 161 170 );
+      font-weight: 300;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-family: 'Circular Spotify Text', 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+    }
+    .containerData > div:nth-child(4){
+      width: 20%;
+      height: 100%;
+      color: rgb(161 161 170 );
+      display: flex;
+      align-items: center;
+    }
+    .containerData > div:nth-child(5){
+      width: 10%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(161 161 170 );
+    }
+    picture {
+      width: 44px;
+      height: 44px;
+    }
+    picture > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.375rem;
+    }
+    .information {
+      width: 80%;
+      height: 100%;
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    .song-title {
+      color: white;
+      font-weight: 300;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-family: 'Circular Spotify Text', 'Arial', sans-serif;
+    }
+    .description {
+      color: rgb(161 161 170 );
+      font-weight: 300;
+      font-size: 0.89rem;
+      line-height: 1.25rem;
+      font-family: 'Circular Spotify Text', 'Arial', sans-serif;
+    }
+  </style>

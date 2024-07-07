@@ -5,23 +5,6 @@
 import { Information } from "../Data/lib.js";
 ---
 
-<!-- <a href={title}>
-    <article>
-        <div class="pictureArticle">
-            <img src={`./${title}.jpg`} alt="imagen de articulo" transition:name=`Album-${title}` />
-            <button class="play-button">
-                <svg class="svg-special" role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
-            </button>
-        </div>
-        <div class="infoArticle">
-            <h4 class={`titleCard${title}-1`} 
-                transition:name=`titleCard${title}`
-            >{title}</h4>
-            <p transition:name=`paragraph${title}`>Alexis Venegas</p>
-        </div>
-
-    </article>
-</a> -->
 {
     Information.map((item) => (
     <a href={item.title}>

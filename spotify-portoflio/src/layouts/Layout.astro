@@ -61,13 +61,25 @@ import { ViewTransitions } from "astro:transitions"
     }
 	::-webkit-scrollbar {
     width: 5px;
-	}
-	::-webkit-scrollbar-track {
-	}
-	::-webkit-scrollbar-thumb {
-	    background-color: white;
-		border-radius: 0px 0px 10px 0px
-	}
+    z-index: 1000; /* Asegúrate de que tenga un z-index alto */
+}
+
+::-webkit-scrollbar-track {
+	/* background-color: rgb(24 24 27); */
+	border-radius: 10px;
+	height: 100%;
+    z-index: 1000; /* Asegúrate de que tenga un z-index alto */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color del scrollbar */
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1000; /* Asegúrate de que tenga un z-index alto */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del scrollbar al pasar el mouse */
+}
 	.svg-special {
         margin: 0 !important;
     }
