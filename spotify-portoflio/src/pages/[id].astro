@@ -57,7 +57,10 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 					<div class="container-player" transition:name=`Article-${id}`> 
 					<header>
 						<div class="pictureHeader">
-							<img src={`./${id}.jpg`} alt="imagen de articulo" transition:name=`Album-${id}` />
+							<img src={`./${id}.jpg`} alt="imagen de articulo" transition:name=`Album-${id}`
+							style={{ borderRadius: id === "Conoceme" ? "50%" : "" }}
+							/>
+							
 						</div>
 						<div class="infoHeader">
 							<h2>Playlist</h2>
@@ -231,7 +234,8 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 	}
 	.pictureHeader > img {
 		width: 200px;
-   		 height: 200px;
+   		height: 200px;
+
 	}
 	.infoHeader {
 		width: 80%;
@@ -298,3 +302,29 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 		margin: 0 0 0px 10px 
 	}
 </style>
+<script>
+    const searchLi = document.getElementById('search-li');
+    const searchInput = document.getElementById('search-input');
+    const searchText = document.getElementById('search-text');
+    const ul = document.querySelector(".list-songs");
+
+    // evento button search
+    searchLi.addEventListener('click', (e) => {
+        searchInput.style.display = 'block';
+        searchText.style.display = 'none';
+    })
+   // vamos a filtrar la ul dependiendo lo que escriban en el input
+    searchInput.addEventListener('keyup', (e) => {
+        const term = e.target.value.toLowerCase();
+        const listSongs = document.querySelectorAll('.liListsongs');
+        Array.from(listSongs).forEach((listSongs) => {
+            const title = listSongs.textContent;
+            if (title.toLowerCase().indexOf(term) != -1) {
+                listSongs.style.display = 'block';
+            } else {
+                listSongs.style.display = 'none';
+            }
+        })
+    })  
+
+</script>

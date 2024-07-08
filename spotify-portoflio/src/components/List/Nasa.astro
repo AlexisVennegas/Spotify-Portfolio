@@ -1,53 +1,140 @@
 ---
 import Slider from "./Slider.jsx";
-
-
+import List from "../List/List.astro";
 ---
 
 <section class="container-Nasa">
     <div class="first-container-info">
-        <div class="Article-info">
-            <p><span>FireGuardian</span> es una aplicación innovadora diseñada para mejorar las capacidades de los bomberos y las autoridades en la prevención y detección rápida de incendios forestales. Nuestra misión es proporcionar un conjunto de herramientas integral que empodere a quienes están en primera línea de la gestión de incendios.
-            Propuesta en un Hackaton de la NASA, FireGuardian fue seleccionada como una de la segunda mejor propuesta de la competencia. te invito a conocer más sobre este proyecto dando click en el botón de abajo.
-            </p>
-            <button class="play-button" >
-                <svg class="svg-special" role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
-            </button>
+        <div>
+            <div class="Article-info">
+                <p><span>FireGuardian</span> es una aplicación innovadora diseñada para mejorar las capacidades de los bomberos y las autoridades en la prevención y detección rápida de incendios forestales. Nuestra misión es proporcionar un conjunto de herramientas integral que empodere a quienes están en primera línea de la gestión de incendios.
+                Propuesta en un Hackaton de la NASA, FireGuardian fue seleccionada como una de la segunda mejor propuesta de la competencia. 
+                </p>       
+            </div>
+            <div class="container-presentation">
+                <Slider client:load id={1} />           
+            </div>
         </div>
-        
-        <div class="information">  
-            <Slider client:load />           
-        </div>
+        <div>
+            <div class="information">  
+                <Slider client:load id={2} />           
+            </div>
+        </div>        
       
     
+    </div>
+    <div class="container-video">
+       
+            <div class="Article-video">
+                <p>
+                    <span>1.-</span> Detección avanzada de incendios
+                    Aprovechando la funcionalidad FIRMS de la NASA impulsada por IA, FireGuardian detecta posibles incendios y notifica rápidamente a los bomberos. La aplicación inicia un proceso de verificación utilizando rastreadores de vuelos, lo que garantiza una identificación precisa a través de datos en tiempo real de las cámaras de los aviones.
+                </p>
+
+                <p >
+                    <span>2.-</span>  Mapeo predictivo de riesgo de incendio
+                    El segundo componente de FireGuardian es un mapa de calor dinámico que evalúa el riesgo de incendio en función de datos históricos de incendios y las condiciones climáticas actuales. Clasifica las áreas en tres niveles de riesgo: bajo, medio y alto, lo que permite a los bomberos monitorear y tomar medidas preventivas de manera proactiva. Actualizaciones de datos en tiempo real con API de Meteomatics
+                </p>
+                <p>
+                    <span>3.-</span> FireGuardian lo mantiene informado con datos en tiempo real al interactuar perfectamente con la API de Meteomatics, lo que garantiza la precisión actualizada al minuto en la información meteorológica y sobre incendios. Participación comunitaria con dispositivos alimentados por satélite
+
+                    Estamos ampliando nuestro alcance más allá de los bomberos y las autoridades al equipar a miembros clave de la comunidad, como guardabosques y agricultores, con dispositivos alimentados por satélite. Estos dispositivos cuentan con una interfaz de botón simple que envía alertas instantáneas a los bomberos, incluidos detalles precisos de geolocalización, incluso en áreas sin cobertura celular.
+                </p>
+            </div>
+            
+        <iframe width="100%" height="561" src="https://www.youtube.com/embed/2GkS4y5iKZo" title="FireGuardian video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </section>
 
 <style>
 .container-Nasa {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;    
     height: auto;
 }
 .first-container-info {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 100%;
     height: 85%;
     display: flex;
     justify-content: space-around;
     padding: 1rem;
 }
+.container-video{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 4rem;
+}
+.container-video > iframe {
+    border-radius: 15px;
+    margin: 50px 0 20px 0;
+}
+.first-container-info > div {
+    /* border: 1px solid red; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+/* primer div */
+    .first-container > div:first-child {
+        width: 70%;
+        
+    }
+/* segundo div */
+    .first-container > div:last-child {
+        width: 30%
+    }
+    .container-presentation {
+        width: 682px;
+        height: auto;
+        margin-top: 74px;
+    }
 .Article-info {
-    width: 574px;
-    height: 190px;
+    width: 682px;
+    height: auto;
     background: hsla(0, 0%, 100%, .07);
     border-radius: 0.375rem;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-end;
-    padding: 1.5rem;
+    padding: inherit;
     flex-direction: column;
 }
+.Article-video {
+    width: 100%;
+    height: auto;
+    background: hsla(0, 0%, 100%, .07);
+    background: hsla(0, 0%, 100%, .07);
+    border-radius: 0.375rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-end;
+    padding: 1rem;
+    flex-direction: column;
+}
+.Article-video > p {
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    color: #a7a7a7;
+    margin: 10px 0;
+}
+.Article-video > p > span {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    color: red;
+    margin: 0 10px;
+}
+
 .Article-info > p > span {
     font-size: 14px;
     line-height: 1.5;
@@ -55,7 +142,8 @@ import Slider from "./Slider.jsx";
     color: Red;
 }
 .Article-info > p {
-    font-size: 12px;
+    font-size: 13px;
+
     text-align: left;
     line-height: 1.5;
     font-family: 'Poppins', sans-serif; 
@@ -75,7 +163,7 @@ import Slider from "./Slider.jsx";
 }
 .play-button {
     background-color: rgb(34 197 94);
-    border: 0px solid transparent;
+    /* border: 0px solid transparent; */
     border-radius: 50%;
     padding: 8px;
     cursor: pointer;
@@ -86,11 +174,3 @@ import Slider from "./Slider.jsx";
     z-index: 2;
     }
 </style>
-<!-- 
-<script  >
-   const playButton = document.querySelector('.Article-info');
-    playButton.addEventListener('click', () => {
-        console.log("hola")
-        location.reload();
-    });
-  </script> -->
