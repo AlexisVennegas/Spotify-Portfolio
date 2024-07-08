@@ -13,6 +13,11 @@ const imageSets = {
         
     ],
     2: [
+        "../App/app1.png",
+        "../App/app2.png",
+        "../App/app3.png",
+        "../App/app4.png",
+        "../App/app5.png",
         "../App/app6.png",
         "../App/app7.png",
         "../App/app8.png",

@@ -9,7 +9,7 @@ import { Information } from "../Data/lib.js";
 import Thumb from '../components/Thumb.astro';
 import VolumenControl from '../components/VolumenControl.astro';
 import AreaInfo from '../components/AreaInfo.astro';
-
+import Check from "../Icons/Check.astro";
 const { id } = Astro.params
 // funcion para obtener el parrafo de la descripcion
 // Función para obtener la información por título
@@ -63,14 +63,19 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 							
 						</div>
 						<div class="infoHeader">
-							<h2>Playlist</h2>
+							{id === "Conoceme" ? <div class="icon-container">
+								<Check id={id} />
+								<p>Artista Verificado</p>
+							</div> : <h2>Playlist</h2>
+							}
 							
 							<h1 class={`titleCard${id}-1`} 
+								style={id === "Conoceme" ? "margin: 10px 0 0px 50px; font-size: 54px;" : ""}
 								transition:name=`titleCard${id}`
-							>{id}</h1>
+							>{id === "Conoceme" ? "Alexis Venegas González" : id}</h1>
 							<p
 								transition:name=`paragraph${id}`
-							>{parrafo}</p>
+							>{id === "Conoceme" ? "14.319.774 oyentes mensuales" : parrafo}</p>
 						</div>
 					</header>
 					<div class="button-container" style={`display: ${showIcon}`}>
@@ -242,11 +247,25 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 		height: 100%;
 	}
 	.infoHeader > h2 {
+		font-size: 13px;
+		color: white;
+		font-weight: 800;
+		font-family: 'Poppins', sans-serif;
+		margin: 50px 0 0px 50px
+	}
+	.icon-container {
+		width: auto;
+		height: auto;
 		color: white;
 		font-size: 13px;
 		font-weight: 800;
 		font-family: 'Poppins', sans-serif;
-		margin: 50px 0 0px 50px
+		margin: 50px 0 0px 50px;
+		display: flex;
+		align-items: center;
+	}
+	.icon-container > p {
+		margin: 0 0 0px 10px
 	}
 	.infoHeader > h1 {
 		color: white;

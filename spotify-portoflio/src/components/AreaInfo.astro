@@ -8,14 +8,18 @@ import { Projects } from "../Data/lib.js";
 import { Education } from "../Data/lib.js";
 import List from "./List/List.astro";
 import Nasa from "./List/Nasa.astro";
+import AboutMe from "./List/AboutMe.astro";
 import Reloj from "../Icons/Reloj.astro";
 import Eye from "../Icons/Eye.astro";
+
 
 const display = title === "Nasa" ? "none" : "flex";
 const widthContainer = title === "Nasa" ? "100%" : "90%";
 ---
 
     <div class="playListOrder" style={`width: ${widthContainer}`} >
+    {title === "Conoceme" ? <h1 class="title">Populares</h1> : ""}  
+      
        <header style={`display: ${display}`} >
         <div class="">
           #
@@ -50,7 +54,10 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       ))
     ) : title === "Nasa" ? (
       <Nasa />
-    ) : ""}
+    ) : title === "Conoceme" ? (
+      <AboutMe />
+    ) : 
+    ""}
 
     </div>
 
@@ -59,6 +66,12 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
     .playListOrder {
       width: 90%;
       height: 100%;
+    }
+    .playListOrder > h1 {
+		  color: white;
+		  font-weight: 800;
+		  font-family: 'Poppins', sans-serif;
+      margin: 20px 0;
     }
     header {
       width: 100%;
