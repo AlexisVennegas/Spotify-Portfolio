@@ -10,14 +10,14 @@ import { Suspense } from "react";
             <p><span>FireGuardian</span> es una aplicación innovadora diseñada para mejorar las capacidades de los bomberos y las autoridades en la prevención y detección rápida de incendios forestales. Nuestra misión es proporcionar un conjunto de herramientas integral que empodere a quienes están en primera línea de la gestión de incendios.
             Propuesta en un Hackaton de la NASA, FireGuardian fue seleccionada como una de la segunda mejor propuesta de la competencia. te invito a conocer más sobre este proyecto dando click en el botón de abajo.
             </p>
-            <button class="play-button" lick>
+            <button class="play-button" >
                 <svg class="svg-special" role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
             </button>
         </div>
         
         <div class="information">  
             <Suspense >
-                <Slider />
+                <Slider  client:idle transition:name="media-player" transition:persist/>
             </Suspense>
         </div>
       

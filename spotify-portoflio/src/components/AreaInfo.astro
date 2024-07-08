@@ -9,6 +9,7 @@ import { Education } from "../Data/lib.js";
 import List from "./List/List.astro";
 import Nasa from "./List/Nasa.astro";
 import Reloj from "../Icons/Reloj.astro";
+import Eye from "../Icons/Eye.astro";
 
 const display = title === "Nasa" ? "none" : "flex";
 const widthContainer = title === "Nasa" ? "100%" : "90%";
@@ -26,7 +27,7 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
           Álbum
         </div>
         <div class="">
-            Example
+          Link
         </div>
         <div class="">
           <Reloj />
@@ -105,10 +106,10 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       width: 20%;
       height: 100%;
       display: flex;
-    
       align-items: center;
       color: rgb(161 161 170 );
     }
+    
     header > div:nth-child(5) {
       width: 10%;
       height: 100%;

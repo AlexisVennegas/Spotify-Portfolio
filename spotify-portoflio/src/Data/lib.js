@@ -80,7 +80,7 @@ export const Skills = [
       id: '5',
       title: "C",
       description: "lenguaje de bajo nivel estructurado",
-      imageUrl: "https://i.scdn.co/image/ab67616d00001e02a9249ebb15ca7a5b75f16a90",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
       album: "back-end",
       time: "2:30",
   },
@@ -124,7 +124,7 @@ export const Skills = [
       id: '10',
       title: "Laravel",
       description: "framework de PHP",
-      imageUrl: "https://i.scdn.co/image/ab67616d00001e02cffeb5001821e9041adcef65",
+      imageUrl: "https://pbs.twimg.com/profile_images/1783560208704241664/8skfbzIV_400x400.jpg",
       album: "back-end",
       time: "2:30",
   }
@@ -133,7 +133,7 @@ export const Skills = [
       id: '11',
       title: "React",
       description: "librería de JavaScript",
-      imageUrl: "https://i.scdn.co/image/ab67616d00001e0221acc4c231327248498a35da",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
       album: "back-end",
       time: "2:30",
   }
@@ -234,7 +234,7 @@ export const Skills = [
     ,
     {
         id: '11',
-        title: "Oposicione Madrid APP",
+        title: "Oposiciones Madrid APP",
         description: "App para oposiciones en Madrid",
         imageUrl: "https://i.scdn.co/image/ab67616d00001e029b6e2d17adea514703b623cc",
         album: "html, css, js, php, sql",
