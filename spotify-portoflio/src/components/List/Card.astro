@@ -1,0 +1,73 @@
+---
+import {Projects} from "../../Data/lib.js";
+interface CardProps {
+    id: string;
+}
+const { id } = Astro.props;
+
+
+---
+
+<!-- 
+<article>
+    <div class="pictureArticle">
+        <img src="./Habilidades.jpg"/>
+       <div>
+    <div class="infoArticle">
+        <h4>Habilidades</h4>
+        <p>Alexis Venegas</p>
+    </div>
+</article> -->
+{
+    id === "Projects" ? 
+    Projects.map((item, index) => (
+        <article key={index}>
+            <div class="pictureArticle">
+                <img src={item.imageUrl}/>
+            </div>
+            <div class="infoArticle">
+                <h4>{item.title}</h4>
+              
+            </div>
+        </article>
+    )) : ""
+}
+
+<style>
+    article {
+        width: 176px;
+        height: 236px;
+        border-radius: 0.375rem;
+        background-color: rgb(113 113 122 / 0.3);
+        padding: 10px;
+        cursor: pointer;
+        transition-duration: 300ms;
+        margin: 0 50px;
+    }
+    .pictureArticle {
+        width: 100%;
+        height: 70%;
+        position: relative;
+        z-index: 1;
+    }
+    .pictureArticle > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.375rem;
+    }
+
+    .infoArticle {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .infoArticle > h4 {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    .infoArticle > p {
+        color: rgb(156 163 175);
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+</style>

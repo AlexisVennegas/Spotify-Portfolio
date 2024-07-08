@@ -1,1 +1,40 @@
-asd
+---
+import List from './List.astro'
+import { Skills } from "../../Data/lib.js";
+import Card from "./Card.astro";
+---
+
+<section>
+    {
+        Skills.slice(0, 5).map((item, index) => (
+        <List key={index} item={item} index={index} />
+      ))
+    }
+    <h1 class="title">Discografía</h1> 
+    <div class="containerArticleModule">
+        <Card id="Projects" />
+    </div>
+</section>
+
+<style>
+    section {
+        border: 1px solid red;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .title {
+        font-size: 23px;
+        color: white;
+        font-weight: 800;
+        font-family: "Poppins", sans-serif;
+        margin:30px 0;
+    }
+    .containerArticleModule {
+        width: 100%;
+        border: 1px solid red;
+        height: auto;
+        display: flex;
+        overflow-x: scroll;
+    }
+</style>
