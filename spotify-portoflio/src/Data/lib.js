@@ -256,7 +256,7 @@ export const Skills = [
   export const Education = [
     {
         id: '1',
-        title: "Confección y publicación de páginas web",
+        title: "Desarollo Web",
         description: "Certificado de profesionalidad N.2",
         imageUrl: "https://www.mostolesdesarrollo.es/images/logo-mostoles-desarrollo.png",
         album: "html, css, js, WordPress",
@@ -290,6 +290,47 @@ export const Skills = [
         time: "1000hrs",
     
     },
+    {
+        id: '4',
+        title: "Bachillerato",
+        description: "Ciencias de la Computación",
+        imageUrl: "https://sociedadtecnologiaydeontologia.wordpress.com/wp-content/uploads/2019/01/logotipo_ipn.png",
+        album: "Ciencias de la Computación",
+        time: "3000hrs",
     
+    },
     
     ];
+
+    export const Cantantes = [
+        {
+            id: '1',
+            title: "RCHP",
+            imageUrl: "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO0nT692-default.jpg",
+        }
+        ,
+        {
+            id: '2',
+            title: "keane",
+            imageUrl: "https://i.scdn.co/image/ab6761610000517492f6dba2793814a1c5aa8d35",
+        }
+        ,
+        {
+            id: '3',
+            title: "Mac deMarco",
+            imageUrl: "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2ggUww-default.jpg"
+        }
+        ,
+        {
+            id: '4',
+            title: "Juan Gabriel",
+            imageUrl: "https://i.scdn.co/image/ab67616d00001e02c9f1936725fe102a81ec28ec",
+        
+        },
+        {
+            id: '4',
+            title: "Maná",
+            imageUrl: "https://i.scdn.co/image/ab67616100005174152dcec8175d19fb12eeb8e0"
+        },
+        
+        ];
