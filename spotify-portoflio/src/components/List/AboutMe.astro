@@ -3,6 +3,7 @@ import List from './List.astro'
 import { Skills } from "../../Data/lib.js";
 import Card from "./Card.astro";
 import CardSinger from "./CardSinger.astro";
+import Slider from "./Slider.jsx";
 ---
 
 <section>
@@ -22,6 +23,21 @@ import CardSinger from "./CardSinger.astro";
     <h1 class="title">Relacionados</h1>
     <div class="containerArticleModule">
         <Card id="Cantantes" />
+    </div>
+    <h1 class="title">Informacion</h1> 
+    <div class="containerArticleModule">
+        <div class="slideraboutme">
+            <Slider client:load id={3}/>
+            <p class="aboutmeText">Profesional con una destacada capacidad de aprendizaje y resolución de problemas.
+                Experiencia en el diseño, desarrollo e implementación de aplicaciones web utilizando
+                tecnologías modernas. Conocimientos sólidos en frontend y backend, con una pasión
+                por crear soluciones eficientes y de alta calidad. Capaz de trabajar en equipo y
+                adaptarse rápidamente a nuevos desafíos tecnológicos.
+                </p>
+        </div>
+        <div class="social-network">
+            asd
+        </div>
     </div>
 </section>
 
@@ -46,9 +62,34 @@ import CardSinger from "./CardSinger.astro";
     display: flex;
     overflow-x: auto;
     padding: 0 10px;
-    justify-content: space-between;
-       
+    justify-content: space-between;       
     }
-  
+    .slideraboutme{
+        width: 70%;
+        height: auto;
+        border: 1px solid yellow;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        position: relative;
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+    .aboutmeText{
+        position: absolute;
+        font-size: 15px;
+        font-weight: 500;
+        color: white;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.551);
+        font-family: "Poppins", sans-serif;
+        padding: 15px;
+        line-height: 20px;
+        top: 70%;
+        width: 518px;
+    }
+    .social-network{
+        width: 30%;
+        height: auto;
+        border: 1px solid yellow;
+    }
 
 </style>
