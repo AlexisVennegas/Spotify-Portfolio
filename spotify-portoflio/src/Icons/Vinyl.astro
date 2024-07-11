@@ -1,0 +1,73 @@
+<div class="vinyl">
+	<div class="label"></div>
+</div>
+<style>
+
+
+.vinyl {
+	-webkit-animation: spin 4s 0.51s linear ;
+	animation: spin 4s 0.51s linear infinite, translateVinyl 1s 0.51s forwards ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 195px;
+	height: 195px;
+	border-radius: 100%;
+	background: linear-gradient(-45deg, #333, black, #555, black, #333);
+    position: absolute;
+	/* transform: translateX(0px); */
+	left: 0%;
+    z-index: -1;
+}
+.vinyl:before,
+.vinyl:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: repeating-radial-gradient(
+		circle at center,
+		#222 4px,
+		transparent 8px
+	);
+	border-radius: 50%;
+}
+
+.label {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	z-index: 1;
+	background-size: 200px;
+	background-repeat: no-repeat;
+}
+.label:before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: #fff;
+	margin: auto;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@keyframes spin {
+	to {
+		/* right: 61%; */
+		transform: rotate(360deg);
+	}
+}
+@keyframes translateVinyl {
+	to {
+		left: 20%;
+	}	
+}
+
+</style>

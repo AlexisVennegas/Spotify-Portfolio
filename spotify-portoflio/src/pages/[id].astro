@@ -10,6 +10,8 @@ import Thumb from '../components/Thumb.astro';
 import VolumenControl from '../components/VolumenControl.astro';
 import AreaInfo from '../components/AreaInfo.astro';
 import Check from "../Icons/Check.astro";
+import Vinyl from '../Icons/Vinyl.astro';
+
 const { id } = Astro.params
 // funcion para obtener el parrafo de la descripcion
 // Función para obtener la información por título
@@ -58,9 +60,9 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 					<header>
 						<div class="pictureHeader">
 							<img src={`./${id}.jpg`} alt="imagen de articulo" transition:name=`Album-${id}`
-							style={{ borderRadius: id === "Conoceme" ? "50%" : "" }}
-							/>
 							
+							/>
+							<Vinyl />
 						</div>
 						<div class="infoHeader">
 							{id === "Conoceme" ? <div class="icon-container">
@@ -236,6 +238,7 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 	}
 	.pictureHeader > img {
 		width: 200px;
