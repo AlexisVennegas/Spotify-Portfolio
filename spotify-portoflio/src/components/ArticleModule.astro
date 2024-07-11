@@ -7,7 +7,7 @@ import { Information } from "../Data/lib.js";
 
 {
     Information.map((item) => (
-    <a href={item.title}>
+    <a href={item.title} >
     <article transition:name=`Article-${item.title}`>
         <div class="pictureArticle">
             <img src={`./${item.title}.jpg`} alt="imagen de articulo" transition:name=`Album-${item.title}` />
@@ -87,6 +87,14 @@ import { Information } from "../Data/lib.js";
         transition:  0.5s;
         left: 100px;
         top: -64px;
+    }
+   	@media  (width < 768px) {
+
+        article {
+            width: 115px !important;
+             height: 177px !important;
+    
+        }
     }
 </style>
 

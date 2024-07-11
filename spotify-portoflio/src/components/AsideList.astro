@@ -7,7 +7,7 @@ import Biblioteca from '../Icons/Biblioteca.astro';
 <ul>
     <li>    
         <Biblioteca />
-        <a href="#">Biblioteca</a>
+        <a href="#" id="aBiblio">Biblioteca</a>
     </li>
 </ul>
 
@@ -28,6 +28,11 @@ import Biblioteca from '../Icons/Biblioteca.astro';
         width: 95%;
         margin: 0 auto;
         height: 100%;
+    }
+    @media (max-width: 768px) {
+        li {
+            width: auto !important;
+        }
     }
   
 </style>

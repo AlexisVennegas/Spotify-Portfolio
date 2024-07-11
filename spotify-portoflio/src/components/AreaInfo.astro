@@ -11,9 +11,12 @@ import Nasa from "./List/Nasa.astro";
 import AboutMe from "./List/AboutMe.astro";
 import Reloj from "../Icons/Reloj.astro";
 import Eye from "../Icons/Eye.astro";
+import MailJs from "./List/MailJs"
 
 
-const display = title === "Nasa" ? "none" : "flex";
+const display = (title === "Nasa" || title === "Contacto") ? "none" : "flex";
+
+
 const widthContainer = title === "Nasa" ? "100%" : "90%";
 ---
     <div class="playListOrder" style={`width: ${widthContainer}`} >
@@ -55,6 +58,9 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       <Nasa />
     ) : title === "Conoceme" ? (
       <AboutMe />
+    ) : 
+    title === "Contacto" ? (
+      <MailJs client:load/>
     ) : 
     ""}
 
@@ -119,6 +125,7 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       height: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
       color: rgb(161 161 170 );
     }
     
@@ -130,5 +137,15 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       align-items: center;
       color: rgb(161 161 170 );
     }
-   
+    @media (width < 768px ) {
+      header > div:nth-child(3), header > div:nth-child(4), header > div:nth-child(5) {
+        display: none !important;
+      }
+      header > div:nth-child(2) {
+        width: 90% !important;
+      }
+      header > div:nth-child(1) { 
+        width: 10% !important;
+      }
+    }
   </style>

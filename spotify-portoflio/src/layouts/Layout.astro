@@ -89,5 +89,31 @@ import { ViewTransitions } from "astro:transitions"
 		height: 100%;
 	}
 
+
+	@media  (width < 768px) {
+		.wrapper  {
+			width: 100%;
+		}
+		/* side */
+		#search-text {
+			display: none !important;
+		}
+		.panel-left {
+			width: 20% !important;
+		}
+		.info, #aBiblio, .play-button, .volume-control {
+			display: none !important;
+		}
+		.navegator, .list-songs {
+			width: 100% !important;
+		}
+		.progress-bar {
+			display: none !important;
+		}
+		.pictureHeader {
+			margin: 0 !important;
+		}
+	}	
+
 </style>
 

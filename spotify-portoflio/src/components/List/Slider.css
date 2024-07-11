@@ -52,3 +52,78 @@
 .next {
     right: 10px;
 }
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-control-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form__group {
+    margin-bottom: 31px;
+    position: relative;
+  }
+  
+  .input-style {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .input-style:focus {
+    border-color: #1db954;
+    outline: none;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s;
+  }
+  
+  .input-style:focus + .form__label,
+  .input-style + .form__label {
+    top: -20px;
+    left: 1px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #1ed760;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .submit-button {
+    background-color: #1db954;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #1aa34a;
+  }
+  .input-error {
+    border-color: #e91429;
+    border: 3px solid #e91429;
+  }
+  textarea {
+    /* usuario solo puede modifiucar la altura pero no el with */
+    resize: vertical;
+    min-height: 30px;
+}
+.go2072408551 {
+  z-index: 333;
+}

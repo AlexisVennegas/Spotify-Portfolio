@@ -8,10 +8,12 @@ interface Props {
         description: string;
         album: string;
         time: string;
+        yt: string;
+        github: string;
     }
 }
 const { title, index, item } = Astro.props;
-import { Skills } from "../Data/lib.js";
+
 import Reloj from "../../Icons/Reloj.astro";  
 
 ---
@@ -35,7 +37,19 @@ import Reloj from "../../Icons/Reloj.astro";
       {item.album}
     </div>
     <div class="">
-        Example
+      
+          <div>
+            {item.yt ? 
+            <a href={`${item.yt}`} target="_blank">
+              <img src="./yt.png" alt="logo de youtube" />
+            </a> : null}
+            </div>
+        <div>
+          {item.github ? 
+          <a href={`${item.github}`} target="_blank">
+            <img src="./github.png" alt="logo de github" /> 
+          </a>: null}
+        </div>
     </div>
     <div class="">
       {item.time}
@@ -96,7 +110,28 @@ import Reloj from "../../Icons/Reloj.astro";
       color: rgb(161 161 170 );
       display: flex;
       align-items: center;
+      display: flex;
     }
+
+    .containerData > div:nth-child(4) > div {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+    .containerData > div:nth-child(4) > div > a > img {
+      width: 20px;
+      height: 20px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .containerData > div:nth-child(4) > div:hover img {
+      transform: scale(2.1);
+      transition: all 0.3s ease-in-out;
+    }
+
     .containerData > div:nth-child(5){
       width: 10%;
       height: 100%;
@@ -110,8 +145,8 @@ import Reloj from "../../Icons/Reloj.astro";
       height: 44px;
     }
     picture > img {
-      width: 100%;
-      height: 100%;
+      width: 44px;
+      height: 44px;
       border-radius: 0.375rem;
     }
     .information {
@@ -136,5 +171,17 @@ import Reloj from "../../Icons/Reloj.astro";
       font-size: 0.89rem;
       line-height: 1.25rem;
       font-family: 'Circular Spotify Text', 'Arial', sans-serif;
+    }
+    @media (width < 768px) {
+       .containerData > div:nth-child(4), .containerData > div:nth-child(5), .containerData > div:nth-child(3){
+        display: none !important;
+       }
+        .containerData > div:nth-child(2){
+          width: 90%;
+        }
+        .containerData > div:nth-child(1){
+          width: 10%;
+        }
+        
     }
   </style>

@@ -14,6 +14,7 @@ const { id } = Astro.props;
 {
     id === "Projects" ? 
     Projects.map((item, index) => (
+        <a href={item.github} target="_blank" >
         <article key={index}>
             <div class="pictureArticle">
                 <img src={item.imageUrl}/>
@@ -23,6 +24,7 @@ const { id } = Astro.props;
                 <p>Link • 2021</p>
             </div>
         </article>
+        </a>
     )) : id === "Educacion" ?
         Education.map((item, index) => (
             <article key={index}>

@@ -150,8 +150,9 @@ export const Skills = [
         imageUrl: "./proyecto1.png",
         album: "html, css, js, php, sql",
         time: "2:30",
+        github: "https://github.com/GhassanKY/foro_Repositorio",
         yt: "https://www.youtube.com/watch?v=GNE7Ao_JzwQ&t=150s&ab_channel=AlexisVenegas"
-    }
+    }   
     ,
     {
         id: '2',
@@ -170,7 +171,8 @@ export const Skills = [
         imageUrl: "https://i2o.scdn.co/image/ab67706c0000cfa35f130c3668ccc18e89a720c8",
         album: "python, machine learning",
         time: "2:30",
-        github: "https://github.com/AI-School-F5-P2/NLP_detector_mensajes_odio.git"
+        github: "https://github.com/AI-School-F5-P2/NLP_detector_mensajes_odio.git",
+        yt: "https://www.youtube.com/watch?v=jmb8q0X2JTc"
     }
     ,
     {
@@ -198,6 +200,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e02d85ba0e3102f838cbbf58409",
         album: "CV2, python, tkinter",
         time: "2:30",
+        github: "https://github.com/AI-School-F5-P2/Face_Recognition_5",
         yt: "https://www.youtube.com/watch?v=fSl03xKaVvc&t=1s&ab_channel=AlexisVenegas"
     }
     ,
@@ -258,6 +261,8 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e028006c6f9d21c761231926abf",
         album: "html, css, js, php, sql",
         time: "2:30",
+        yt: "https://www.youtube.com/watch?v=aBeSC3SYFOs&ab_channel=AlexisVenegas",
+        github: "https://github.com/ispipa/Majica-Project.git"
     }
     
     ];

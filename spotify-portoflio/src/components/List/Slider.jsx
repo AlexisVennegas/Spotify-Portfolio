@@ -66,7 +66,7 @@ const Slider = ({ id }) => {
     return (
         <div className="slider"  >
             <style>
-                {id === 3 ? ".slider {height: 487px !important; width: 724px !important}" : ""}
+                {id === 3 ? ".slider {height: 487px !important; width: 100% !important}" : ""}
             </style>
             <div className="slides">
                 {showSlides()}
