@@ -1,54 +1,35 @@
-# Astro Starter Kit: Basics
+# Mi Portafolio
 
-```sh
-npm create astro@latest -- --template basics
+¡Bienvenido a mi portafolio personal! Este proyecto muestra mis habilidades y proyectos utilizando Astro y React.
+
+## Tabla de Contenidos
+
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Características](#características)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+
+
+## Instalación
+
+Para comenzar con este proyecto, clona el repositorio y luego instala las dependencias:
+
+```bash
+git clone https://github.com/tuusuario/tu-portafolio.git
+cd tu-portafolio
+npm install
+npm run dev
 ```
+## uso
+Esto iniciará el servidor de desarrollo y podrás ver el portafolio en tu navegador en http://localhost:4321
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Características
+Astro: Generación de sitios estáticos para un rendimiento ultrarrápido.
+React: Componentes interactivos para mejorar la experiencia del usuario.
+Diseño Responsivo: Optimizado para verse en cualquier dispositivo.
+Interfaz Moderna: Diseño limpio y profesional.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Capturas de Pantalla
+Aquí tienes algunas capturas de pantalla de mi portafolio:
+`images/1.png`, `images/2.png`, `images/3.png`
