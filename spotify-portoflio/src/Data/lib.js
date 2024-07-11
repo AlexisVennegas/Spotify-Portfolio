@@ -150,6 +150,7 @@ export const Skills = [
         imageUrl: "./proyecto1.png",
         album: "html, css, js, php, sql",
         time: "2:30",
+        yt: "https://www.youtube.com/watch?v=GNE7Ao_JzwQ&t=150s&ab_channel=AlexisVenegas"
     }
     ,
     {
@@ -159,6 +160,7 @@ export const Skills = [
         imageUrl: "./Proyecto5.png",
         album: "html, css, js, php, sql",
         time: "2:30",
+        github: "https://github.com/rauledutorres/Proyecto-Mini-Red-Social"
     }
     ,
     {
@@ -168,6 +170,7 @@ export const Skills = [
         imageUrl: "https://i2o.scdn.co/image/ab67706c0000cfa35f130c3668ccc18e89a720c8",
         album: "python, machine learning",
         time: "2:30",
+        github: "https://github.com/AI-School-F5-P2/NLP_detector_mensajes_odio.git"
     }
     ,
     {
@@ -177,7 +180,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e02016e0c0dd9748553cf498983",
         album: "python, machine learning",
         time: "2:30",
-    
+        github: "https://github.com/AI-School-F5-P2/Aerolinea_equipo_4"
     },
     {
         id: '5',
@@ -186,6 +189,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e029e0d6948f686dc64958dfe15",
         album: "python, flask, sql",
         time: "2:30",
+        github: "https://github.com/AI-School-F5-P2/danza_fenix"
     },
     {
         id: '6',
@@ -194,6 +198,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e02d85ba0e3102f838cbbf58409",
         album: "CV2, python, tkinter",
         time: "2:30",
+        yt: "https://www.youtube.com/watch?v=fSl03xKaVvc&t=1s&ab_channel=AlexisVenegas"
     }
     ,
     {
@@ -203,6 +208,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e02fe23dd528684203b1b2eb754",
         album: "c, linux, git, bash",
         time: "2:30",
+        github: "https://github.com/AlexisVennegas/42cursus"
     }
     ,
     {
@@ -212,6 +218,7 @@ export const Skills = [
         imageUrl: "./Nasa.jpg",
         album: "analisis de datos, python, flask, sql",
         time: "2:30",
+        github: "https://github.com/AnaGomez16/NASA_SpaceApps_Challenge"
     }
     ,
     {
@@ -221,6 +228,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e025f12c19b6358841472240173",
         album: "python, machine learning, sql",
         time: "2:30",
+        github: "https://github.com/AI-School-F5-P2/vinopremier"
     }
     ,
     {
@@ -230,6 +238,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e02f0f7d8fcb934e3407a6ebfac",
         album: "apache kafka, spark, python, sql",
         time: "2:30",
+        github: "https://github.com/AI-School-F5-P2/Engineer4"
     }
     ,
     {
@@ -239,6 +248,7 @@ export const Skills = [
         imageUrl: "https://i.scdn.co/image/ab67616d00001e029b6e2d17adea514703b623cc",
         album: "html, css, js, php, sql",
         time: "2:30",
+        github: "https://github.com/AlexisVennegas/App-oposicion-de-madrid-  "
     }
     ,
     {
