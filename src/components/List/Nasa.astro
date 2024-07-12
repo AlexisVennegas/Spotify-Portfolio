@@ -107,7 +107,8 @@ import List from "../List/List.astro";
     align-items: flex-end;
     padding: inherit;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(88, 88, 88, 0.3) 0px 19px 38px, rgb(0, 0, 0) 0px 15px 12px;
+
 }
 .Article-video {
     width: 100%;
@@ -158,6 +159,8 @@ import List from "../List/List.astro";
     height: 593px;
     background: hsla(0, 0%, 100%, .07);
     border-radius: 9%;
+    box-shadow: rgba(88, 88, 88, 0.3) 0px 19px 38px, rgb(0, 0, 0) 0px 15px 12px;
+
 }   
 .information > img {
     width: 100%;
@@ -176,5 +179,25 @@ import List from "../List/List.astro";
     margin-left: 25px;
     transition: 0.5s;
     z-index: 2;
+    }
+    @media (width < 1400px ) {
+        .first-container-info {
+            padding: 0 !important;
+            flex-direction: column !important;
+
+        }
+        .container-video {
+            padding: 0 1rem !important;
+        }
+        .container-presentation {
+            width: 100% !important;
+        }
+        .first-container-info > div {
+            width: 100% !important;
+        }
+        .Article-info {
+            width: 100% !important;
+        }
+      
     }
 </style>

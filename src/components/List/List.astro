@@ -173,15 +173,26 @@ import Reloj from "../../Icons/Reloj.astro";
       font-family: 'Circular Spotify Text', 'Arial', sans-serif;
     }
     @media (width < 768px) {
-       .containerData > div:nth-child(4), .containerData > div:nth-child(5), .containerData > div:nth-child(3){
-        display: none !important;
-       }
-        .containerData > div:nth-child(2){
-          width: 90%;
-        }
+       
+       
         .containerData > div:nth-child(1){
           width: 10%;
         }
-        
+        .description {
+          line-height: .89rem !important;
+          font-size: .79rem !important;
+        }
+    }
+    @media (width < 1200px) {
+     .containerData > div:nth-child(5), .containerData > div:nth-child(3){
+        display: none !important;
+       }
+       .containerData > div:nth-child(2){
+          width: 80%;
+        }
+        .containerData > div:nth-child(4){
+          width: 10% !important;
+          flex-direction: column;
+        }
     }
   </style>

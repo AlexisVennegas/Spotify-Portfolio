@@ -5,6 +5,7 @@
     height: 100%;
     margin: auto;
     border-radius: 16px; /* Opcional: bordes redondeados */
+    box-shadow: rgba(88, 88, 88, 0.3) 0px 19px 38px, rgb(0, 0, 0) 0px 15px 12px;
 }
 
 .slides {

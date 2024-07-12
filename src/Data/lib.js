@@ -36,6 +36,12 @@ export const Information = [
     title: "Nasa",
     description: "Bienvenido a FireGuardian, una solución innovadora desarrollada como parte del desafío NASA Space Apps 2023: Gestión de incendios: aumento de las oportunidades de gestión de incendios basadas en la comunidad.",
     imageUrl: "./Nasa.jpg",
+  },
+  {
+    id: '7',
+    title: "feature",
+    description: "¿¿Incognita??",
+    imageUrl: "./feature.jpg",
   }
 ];
 export const Skills = [

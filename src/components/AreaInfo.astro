@@ -11,7 +11,7 @@ import Nasa from "./List/Nasa.astro";
 import AboutMe from "./List/AboutMe.astro";
 import Reloj from "../Icons/Reloj.astro";
 import Eye from "../Icons/Eye.astro";
-import MailJs from "./List/MailJs"
+import MailJs from "./React/MailJs.jsx"
 
 
 const display = (title === "Nasa" || title === "Contacto") ? "none" : "flex";
@@ -138,7 +138,7 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       color: rgb(161 161 170 );
     }
     @media (width < 768px ) {
-      header > div:nth-child(3), header > div:nth-child(4), header > div:nth-child(5) {
+      header > div:nth-child(3), header > div:nth-child(5) {
         display: none !important;
       }
       header > div:nth-child(2) {

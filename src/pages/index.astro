@@ -129,5 +129,16 @@ import ContentArticle from '../components/ContentArticle.astro';
 		overflow-y: scroll;
 		overflow-x: hidden;
 	}
+	@media (width < 768px)
+	{
+		.information-music {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.cover {
+			margin: 0 !important;
+		}
+	}
 	
 </style>
