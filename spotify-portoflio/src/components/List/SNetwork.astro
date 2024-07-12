@@ -1,10 +1,12 @@
 
 
 <section>
-    <img src="./linkedin.png" alt="logo de linkedin">
-    <img src="./email.png" alt="logo de correo">
-    <img src="./github.png" alt="logo de github">
-    <img src="./instagram.png" alt="logo de instagram">
+
+    <a href="https://www.linkedin.com/in/alexis-venegas-gonzalez/"><img src="./linkedin.png" alt="logo de linkedin"></a>
+    <!-- <a href="./Contacto"><img src="./email.png" alt="logo de correo"></a> -->
+    <a href="https://github.com/AlexisVennegas"><img src="./github.png" alt="logo de github"></a>
+    <a href="https://www.instagram.com/alex.vennegas/"><img src="./instagram.png" alt="logo de instagram"></a>
+    <a id="download-link" href="cv.pdf" download="cv.pdf"><img src="./cv.png" alt="logo de instagram"></a>
 
 
 </section>
@@ -16,16 +18,30 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
     }
-    section > img {
+    section > a >  img {
         width: 50px;
         height: 50px;
         padding: 10px;
         cursor: pointer;
         margin: 10px 0;
-        border-radius: 50%;
-        background-color: black ;
+    }
+    @media (width < 768px){
+        section {
+            flex-direction: row;
+        }
     }
 </style>
+
+
+    <script >
+    document.getElementById('download-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      const link = document.createElement('a');
+      link.href = "./cv/cv-alexis-venegas.pdf";
+      link.download = 'cv-alexis-venegas.pdf';
+      link.click();
+    });
+</script>
