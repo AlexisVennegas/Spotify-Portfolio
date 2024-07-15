@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
-import '../List/Slider.css';
+import './Slider.css';
 
 export const MailJs = () => {
   const [formState, setFormState] = useState({

@@ -6,15 +6,16 @@ const { title } = Astro.props;
 import { Skills } from "../Data/lib.js";
 import { Projects } from "../Data/lib.js";
 import { Education } from "../Data/lib.js";
+import { Contacto } from "../Data/lib.js";
 import List from "./List/List.astro";
 import Nasa from "./List/Nasa.astro";
 import AboutMe from "./List/AboutMe.astro";
 import Reloj from "../Icons/Reloj.astro";
 import Eye from "../Icons/Eye.astro";
-import MailJs from "./List/MailJs.jsx";
+// import MailJs from "./List/MailJs.jsx";
+import Mailjs2 from "../components/React/Mailjs2"
 
-
-const display = (title === "Nasa" || title === "Contacto") ? "none" : "flex";
+const display = (title === "Nasa") ? "none" : "flex";
 
 
 const widthContainer = title === "Nasa" ? "100%" : "90%";
@@ -60,7 +61,10 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       <AboutMe />
     ) : 
     title === "Contacto" ? (
-      <MailJs client:load/>
+      // <MailJs client:load/>
+      Contacto.map((item, index) => (
+        <Mailjs2  item={item} index={index} />
+      ))
     ) : 
     ""}
 
