@@ -77,7 +77,7 @@
   border: 1px solid;
 }
 .form-data > div:nth-child(2){
-  width: 85%;
+  width: 80%;
   height: 100%;
   color: rgb(161 161 170 );
   font-weight: 300;
@@ -89,6 +89,16 @@
   border: 1px solid white;
 }
 
+.form-data > div:nth-child(4){
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(161 161 170 );
+    border: 1px solid white;
+}
+
 .form-data > div:nth-child(5){
   width: 10%;
   height: 100%;
@@ -97,4 +107,70 @@
   align-items: center;
   color: rgb(161 161 170 );
   border: 1px solid white;
+}
+
+.pictureStyle {
+    border: 1px solid white;
+    width: 47px;
+    height: 47px;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+.pictureStyle > img {
+    width: 47px;
+    height: 47px;
+    border-radius: 2px;
+}
+
+.pictureStyle > p {
+    border: 1px solid red;
+    font-size: 47px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.inputStyle {
+    height: 47px;
+    width: 300px;
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+.textareaStyle{
+    height: 47px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0 0 4px ;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    resize:  none;
+}
+.svgEspecial {
+    margin: 0 !important;
+    width: 47px;
+    height: 47px;
+}
+.buttonStyle {
+    height: 47px;
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+.error {
+    border: 2px solid red;
 }

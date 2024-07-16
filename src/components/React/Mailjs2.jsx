@@ -3,7 +3,12 @@ import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
 import './Slider.css';
 
-export const MailJs2 = () => {
+
+export const MailJs2 = ({index, item}) => {
+  
+    const [valueName, setVname] = useState("")
+
+
   const [formState, setFormState] = useState({
     user_name: '',
     user_email: '',
@@ -16,6 +21,7 @@ export const MailJs2 = () => {
     user_message: false,
   });
 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormState({
@@ -25,6 +31,15 @@ export const MailJs2 = () => {
 
     validateField(name, value);
   };
+
+   
+  const detectLetter = (e) => {
+    const firstLetter = e.target.value[0]
+    
+    setVname(firstLetter)
+  
+  };
+
 
   const validateField = (name, value) => {
     let isValid = true;
@@ -77,14 +92,55 @@ export const MailJs2 = () => {
     <div className="form-container">
       <Toaster />
         <form action="" className="form-data">
+         
+            <div>{index}</div>
             <div>
-             
+              <picture className='pictureStyle'>
+                {
+                  valueName ? 
+                  <p>{valueName}</p> : 
+                  <img src={valueName ? "" : item.img} alt="" />
+
+                }
+              </picture>
+          {
+            item.type === "text" ? (
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Nombre..."
+                  className={errors.user_name ? 'error' : 'inputStyle'}
+                  onChangeCapture={detectLetter}
+                />
+              ) : item.type === "email" ? (
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Correo..."
+                  value={formState.user_email}
+                  onChange={handleChange}
+                  className={errors.user_email ? 'error' : 'inputStyle'}
+                />
+              ) : item.type === "textarea" ? (
+                <textarea
+                  name="user_message"
+                  placeholder="Mensaje..."
+                  value={formState.user_message}
+                  onChange={handleChange}
+                  className={errors.user_message ? 'error' : 'textareaStyle'}
+                />
+              ) : item.type === "submit" ? (
+                <button className='buttonStyle' type="submit" onClick={sendEmail}>{item.label}Enviar</button>
+              ) :
+              null
+            
+            
+          }
             </div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
-
+            <div>{item.duration}</div>
+           
         </form>
     </div>
   );

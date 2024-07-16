@@ -357,51 +357,31 @@ export const Skills = [
         ];
 
 
-export const Contacto = [
+export const ContactoData = [
             {
                 id: '1',
-                title: "Desarollo Web",
-                description: "Certificado de profesionalidad N.2",
-                imageUrl: "https://www.mostolesdesarrollo.es/images/logo-mostoles-desarrollo.png",
-                album: "html, css, js, WordPress",
-                time: "500hrs",
+                type: "text",
+                duration: "2:30",
+                img: "https://i.scdn.co/image/ab67616d00001e02d3ca962fd3e08e4caf33f302"
             }
             ,
             {
                 id: '2',
-                title: "Bootcamp Microsoft IA",
-                description: "Ingeniero de Datos, Analista de Datos, Desarrollador de IA",
-                imageUrl: "https://media.licdn.com/dms/image/C4E0BAQHJ8S2GXbJkAg/company-logo_100_100/0/1656928320986/factoraf5_logo?e=1728518400&v=beta&t=2IPchxSDreuVFPgLrt2gyK2abvoywl0nLMv3W5qughQ",
-                album: "python, jupyter-Ntbook, Dockers, Azure",
-                time: "1250hrs",
+                type: "email",
+                duration: "2:30"
             }
             ,
             {
                 id: '3',
-                title: "42 Madrid - Fundación Telefónica",
-                description: "Programación en C",
-                imageUrl: "https://i.scdn.co/image/ab67616d00001e02fe23dd528684203b1b2eb754",
-                album: "python, machine learning",
-                time: "2000hrs", 
+                type: "textarea",
+                duration: "2:30"
             }
             ,
             {
                 id: '4',
-                title: "Bootcamp Full Stack Developer",
-                description: "Desarrollo de aplicaciones web y móviles",
-                imageUrl: "https://larueca.info/wp-content/uploads/2021/08/circuloamarillofondo.png",
-                album: "js, php, Laravel, React, mysql, ",
-                time: "1000hrs",
+               type: "submit",
+                duration: "2:30"
             
-            },
-            {
-                id: '4',
-                title: "Bachillerato",
-                description: "Ciencias de la Computación",
-                imageUrl: "https://sociedadtecnologiaydeontologia.wordpress.com/wp-content/uploads/2019/01/logotipo_ipn.png",
-                album: "Ciencias de la Computación",
-                time: "3000hrs",
-            
-            },
+            }
             
             ];
