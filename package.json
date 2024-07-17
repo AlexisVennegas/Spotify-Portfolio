@@ -3,10 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -17,8 +16,5 @@
     "astro": "^4.11.4",
     "react-hot-toast": "^2.4.1",
     "solid-toast": "^0.5.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.5.3"
   }
 }
