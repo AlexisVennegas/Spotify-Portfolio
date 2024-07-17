@@ -15,7 +15,7 @@ import Search from '../Icons/Search.astro';
         <a>
             <li id="search-li">
                 <Search />
-                <p id="search-text" >Buscar</p>
+                <p id="search-text-search" >Buscar</p>
                 <input id="search-input" type="search" placeholder="Buscar" />
             </li>
         </a>
@@ -65,13 +65,14 @@ import Search from '../Icons/Search.astro';
 <script>
     const searchLi = document.getElementById('search-li');
     const searchInput = document.getElementById('search-input');
-    const searchText = document.getElementById('search-text');
+    const searchText = document.getElementById('search-text-search');
     const ul = document.querySelector(".list-songs");
 
     // evento button search
     searchLi.addEventListener('click', (e) => {
         searchInput.style.display = 'block';
         searchText.style.display = 'none';
+        
     })
    // vamos a filtrar la ul dependiendo lo que escriban en el input
     searchInput.addEventListener('keyup', (e) => {

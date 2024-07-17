@@ -3,11 +3,9 @@ import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
 import './Slider.css';
 
-
-export const MailJs2 = ({index, item}) => {
+export const MailJs2 = ({ index, item }) => {
   
-    const [valueName, setVname] = useState("")
-
+  const [valueName, setVname] = useState("");
 
   const [formState, setFormState] = useState({
     user_name: '',
@@ -19,8 +17,8 @@ export const MailJs2 = ({index, item}) => {
     user_name: false,
     user_email: false,
     user_message: false,
+    
   });
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,23 +28,16 @@ export const MailJs2 = ({index, item}) => {
     });
 
     validateField(name, value);
-  };
 
-   
-  const detectLetter = (e) => {
-    const firstLetter = e.target.value[0]
-    
-    setVname(firstLetter)
-  
-  };
 
+    if (name === 'user_name') {
+      setVname(value[0]);
+    }
+  };
 
   const validateField = (name, value) => {
     let isValid = true;
 
-    if (name === 'user_name' && value.trim() === '') {
-      isValid = false;
-    }
 
     if (name === 'user_email' && !value.includes('@')) {
       isValid = false;
@@ -65,22 +56,19 @@ export const MailJs2 = ({index, item}) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const isFormValid = !Object.values(errors).some(error => error) &&
-                        !Object.values(formState).some(field => field.trim() === '');
+    
+    // vamos a mostrar por consola los values
+    console.log(e.target.user_name);
 
-    if (!isFormValid) {
-      toast.error("Please fill in all fields correctly", { position: "bottom-center" });
-      return;
-    }
 
-    const emailPromise = emailjs.sendForm('service_vcnvjck', 'template_4c65twn', e.target, '7y45ptOrxD6g3l6XZ');
+    // const emailPromise = emailjs.sendForm('service_vcnvjck', 'template_4c65twn', e.target, '7y45ptOrxD6g3l6XZ');
 
     toast.promise(
       emailPromise,
       {
-        loading: 'Sending email...',
-        success: 'Email sent successfully!',
-        error: 'Failed to send email',
+        loading: 'Enviando correo...',
+        success: 'correo enviado!',
+        error: 'Error al enviar correo',
       },
       { position: 'bottom-center' }
     );
@@ -91,57 +79,58 @@ export const MailJs2 = ({index, item}) => {
   return (
     <div className="form-container">
       <Toaster />
-        <form action="" className="form-data">
-         
-            <div>{index}</div>
-            <div>
-              <picture className='pictureStyle'>
-                {
-                  valueName ? 
-                  <p>{valueName}</p> : 
-                  <img src={valueName ? "" : item.img} alt="" />
-
-                }
-              </picture>
-          {
-            item.type === "text" ? (
-                <input
-                  type="text"
-                  name="user_name"
-                  placeholder="Nombre..."
-                  className={errors.user_name ? 'error' : 'inputStyle'}
-                  onChangeCapture={detectLetter}
-                />
-              ) : item.type === "email" ? (
-                <input
-                  type="email"
-                  name="user_email"
-                  placeholder="Correo..."
-                  value={formState.user_email}
-                  onChange={handleChange}
-                  className={errors.user_email ? 'error' : 'inputStyle'}
-                />
-              ) : item.type === "textarea" ? (
-                <textarea
-                  name="user_message"
-                  placeholder="Mensaje..."
-                  value={formState.user_message}
-                  onChange={handleChange}
-                  className={errors.user_message ? 'error' : 'textareaStyle'}
-                />
-              ) : item.type === "submit" ? (
-                <button className='buttonStyle' type="submit" onClick={sendEmail}>{item.label}Enviar</button>
-              ) :
-              null
-            
-            
-          }
-            </div>
-            <div></div>
-            <div></div>
-            <div>{item.duration}</div>
-           
-        </form>
+      <form className="form-data" onSubmit={sendEmail}>
+        <div>{index}</div>
+        <div>
+          <picture className='pictureStyle'>
+            {valueName ? <p>{valueName}</p> : <img src={item.img} alt="" />}
+          </picture>
+          {item.type === "text" ? (
+            <input
+              id="user_name"
+              name="user_name"
+              placeholder="Nombre..."
+              aria-invalid={errors.user_name ? "true" : "false"}
+              aria-errormessage="username-error-message"
+              autoComplete="username"
+              className={errors.user_name ? 'error' : 'inputStyle'}
+              onChange={handleChange}
+              type="text"
+              value={formState.user_name}
+            />
+          ) : item.type === "email" ? (
+            <input
+              id="user_email"
+              name="user_email"
+              placeholder="Correo..."
+              aria-invalid={errors.user_email ? "true" : "false"}
+              aria-errormessage="email-error-message"
+              autoComplete="email"
+              className={errors.user_email ? 'error' : 'inputStyle'}
+              value={formState.user_email}
+              onChange={handleChange}
+              type="email"
+            />
+          ) : item.type === "textarea" ? (
+            <textarea
+              id="user_message"
+              name="user_message"
+              placeholder="Mensaje..."
+              aria-invalid={errors.user_message ? "true" : "false"}
+              aria-errormessage="message-error-message"
+              autoComplete="message"
+              className={errors.user_message ? 'error' : 'textareaStyle'}
+              value={formState.user_message}
+              onChange={handleChange}
+            />
+          ) : item.type === "submit" ? (
+            <button className='buttonStyle'>Enviar</button>
+          ) : null}
+        </div>
+        <div></div>
+        <div></div>
+        <div>{item.duration}</div>
+      </form>
     </div>
   );
 };

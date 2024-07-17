@@ -368,19 +368,22 @@ export const ContactoData = [
             {
                 id: '2',
                 type: "email",
-                duration: "2:30"
+                duration: "2:30",
+                img: "https://i.scdn.co/image/ab67616d00001e02bf76f682f914fd6be05d7856"
             }
             ,
             {
                 id: '3',
                 type: "textarea",
-                duration: "2:30"
+                duration: "2:30",
+                img: "./Contacto.jpg"
             }
             ,
             {
                 id: '4',
-               type: "submit",
-                duration: "2:30"
+                type: "submit",
+                duration: "2:30",
+                img: "https://i.scdn.co/image/ab67616d00001e0217de89297de7b31085c9444d"
             
             }
             

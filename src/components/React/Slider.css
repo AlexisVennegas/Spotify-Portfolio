@@ -54,7 +54,6 @@
     right: 10px;
 }
 .form-container {
-    border: 1px solid red;
     width: 100%;
 
 }
@@ -74,7 +73,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
 }
 .form-data > div:nth-child(2){
   width: 80%;
@@ -86,7 +84,6 @@
   font-family: 'Circular Spotify Text', 'Arial', sans-serif;
   display: flex;
   align-items: center;
-  border: 1px solid white;
 }
 
 .form-data > div:nth-child(4){
@@ -96,7 +93,6 @@
     justify-content: center;
     align-items: center;
     color: rgb(161 161 170 );
-    border: 1px solid white;
 }
 
 .form-data > div:nth-child(5){
@@ -106,31 +102,32 @@
   justify-content: center;
   align-items: center;
   color: rgb(161 161 170 );
-  border: 1px solid white;
 }
 
 .pictureStyle {
-    border: 1px solid white;
     width: 47px;
     height: 47px;
-    margin: 0 20px;
+    margin: 0 20px 0 0;
     border-radius: 2px;
+    transition: 2s;
 }
 .pictureStyle > img {
+    transition: 2s;
+
     width: 47px;
     height: 47px;
     border-radius: 2px;
 }
 
 .pictureStyle > p {
-    border: 1px solid red;
+    transition: 2s;
     font-size: 47px;
     text-align: center;
     height: 100%;
     width: 100%;
     text-transform: uppercase;
     background-color: white;
-    padding: 10px;
+    padding: 13px 0 0 0;
     color: black;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -172,5 +169,17 @@
 
 }
 .error {
-    border: 2px solid red;
+    border-bottom: 1px solid red;
+    outline: none !important;
+    height: 47px;
+    width: 300px;
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+.go2072408551 {
+    position: relative !important;
+    bottom: 150px !important;
+    right: 50px !important
 }

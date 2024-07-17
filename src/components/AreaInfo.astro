@@ -15,6 +15,8 @@ import Eye from "../Icons/Eye.astro";
 // import MailJs from "./List/MailJs.jsx";
 import Mailjs2 from "../components/React/Mailjs2"
 import Contacto from "./List/Contacto.astro";
+import Prueba from "./List/Prueba.astro";
+
 
 const display = (title === "Nasa") ? "none" : "flex";
 
@@ -66,6 +68,7 @@ const widthContainer = title === "Nasa" ? "100%" : "90%";
       ContactoData.map((item, index) => (
         <Mailjs2 item={item} index={index} client:load/>
       ))
+      
     ) : 
     ""}
 
