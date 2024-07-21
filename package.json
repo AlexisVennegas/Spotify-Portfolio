@@ -1,5 +1,5 @@
 {
-  "name": "spotify-portoflio",
+  "name": "tatuajes-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,14 +11,10 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.6.0",
-    "@astrojs/vercel": "^7.7.2",
+    "@astrojs/vercel": "^7.6.0",
     "@emailjs/browser": "^4.4.1",
-    "astro": "^4.11.4",
+    "astro": "^4.8.0",
     "react-hot-toast": "^2.4.1",
-    "solid-toast": "^0.5.0"
-  },
-  "engines": {
-    "node": "^18.17.1 || ^20.3.0 || >=21.0.0",
-    "npm": ">=9.6.5"
+    "vercel": "^35.1.0"
   }
 }
