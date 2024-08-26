@@ -23,15 +23,18 @@ import Biblioteca from '../Icons/Biblioteca.astro';
     li {
         margin-top: 10px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 95%;
         margin: 0 auto;
+        padding: 20px;
         height: 100%;
     }
     @media (max-width: 768px) {
         li {
             width: auto !important;
+            justify-content: center; 
+            padding: 0 !important;
         }
     }
   

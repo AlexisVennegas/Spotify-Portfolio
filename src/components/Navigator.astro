@@ -39,11 +39,18 @@ import Search from '../Icons/Search.astro';
 
     li {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        padding: 30px;
         align-items: center;
         width: 95%;
-        margin: 0 auto;
         height: 50%;
+    }
+    @media  (width < 768px) {
+        li {
+            justify-content: center;
+            padding: 0 !important;
+        }    
+        
     }
     #search-input {
         display: none;
