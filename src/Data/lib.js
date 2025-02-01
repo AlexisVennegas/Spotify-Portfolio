@@ -10,7 +10,7 @@ export const Information = [
   {
     id: '2',
     title: "Habilidades",
-    description: "Cuento con habilidades en el desarrollo de aplicaciones web, utilizando tecnologías como React, Node.js, Express, MongoDB, PostgreSQL, entre otras. Además, tengo experiencia en el diseño de interfaces de usuario, utilizando herramientas como Figma y Adobe XD. También tengo conocimientos en el desarrollo de aplicaciones móviles utilizando React Native.",
+    description: "A lo largo de mi trayectoria, he trabajado con diversas tecnologías y herramientas que me han permitido desarrollar soluciones eficientes y bien estructuradas. Siempre busco mejorar mis conocimientos y adaptarme a nuevos retos, explorando diferentes enfoques para optimizar cada proyecto.",
     imageUrl: "./Habilidades.jpg",
   },
   {
@@ -22,13 +22,13 @@ export const Information = [
   {
     id: '4',
     title: "Proyectos",
-    description: "Estos son algunos de los proyectos que he realizado, si deseas ver más proyectos puedes visitar mi perfil de GitHub.",
+    description: "A lo largo de mi trayectoria, he trabajado en diversos proyectos que abarcan desde el desarrollo web y móvil hasta inteligencia artificial y análisis de datos. Cada uno de ellos ha sido una oportunidad para aprender, experimentar y mejorar mis habilidades. Aquí puedes ver algunos de los proyectos en los que he trabajado. Si quieres conocer más, te invito a visitar mi perfil de GitHub.",
     imageUrl: "./Proyectos.jpg",
   },
   {
     id: '5',
     title: "Educacion",
-    description: "Soy egresado de la carrera de Ingeniería en Sistemas Computacionales, en la Universidad Tecnológica de la Mixteca. Durante mi carrera académica, he participado en diversos proyectos de desarrollo de software, tanto en la universidad como de manera independiente.",
+    description: "Mi formación se ha centrado en el desarrollo de software y la programación, combinando estudios formales con aprendizaje autodidacta. He tenido la oportunidad de formarme en distintos lenguajes, metodologías y herramientas, siempre buscando mejorar mis conocimientos y adaptarme a los nuevos retos del sector.",
     imageUrl: "./Educacion.jpg",
   },
   {
@@ -125,6 +125,7 @@ export const Skills = [
       album: "back-end",
       time: "2:30",
   }
+  
   ,
   {
       id: '10',
@@ -143,8 +144,46 @@ export const Skills = [
       album: "back-end",
       time: "2:30",
   }
-  ,
-  
+  ,{
+    id: '12',
+    title: "MongoDB",
+    description: "base de datos NoSQL",
+    imageUrl: "https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png",
+    album: "back-end",
+    time: "2:30",
+}
+,{
+    id: '13',
+    title: "oracle",
+    description: "base de datos",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ59E94pQlK2qC1SZlvgPdpgVJabXyhJomDAQ&s",
+    album: "back-end",
+    time: "2:30",
+},
+{
+    id: '14',
+    title: "Power BI",
+    description: "herramienta de análisis de datos",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png",
+    album: "back-end",
+    time: "2:30",
+},
+{
+    id: '15',
+    title: "Wordpress",
+    description: "gestor de contenido",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQqvP9mSAN_KNxZlbvD9VT-yl4Vf_PuT6Cw&s",
+    album: "back-end",
+    time: "2:30",
+},
+{
+    id: '16',
+    title: "Docker",
+    description: "plataforma de contenedores",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpdpL-KcerREshg7ug3zsjouWlHyUn3GFP4w&s",
+    album: "back-end",
+    time: "2:30",
+},
   ];
 
 
@@ -288,7 +327,7 @@ export const Skills = [
         id: '2',
         title: "Bootcamp Microsoft IA",
         description: "Ingeniero de Datos, Analista de Datos, Desarrollador de IA",
-        imageUrl: "https://media.licdn.com/dms/image/C4E0BAQHJ8S2GXbJkAg/company-logo_100_100/0/1656928320986/factoraf5_logo?e=1728518400&v=beta&t=2IPchxSDreuVFPgLrt2gyK2abvoywl0nLMv3W5qughQ",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyqFikwQjZKCRY9hUsF7eP5bB_A7dIB9Ruug&s",
         album: "python, jupyter-Ntbook, Dockers, Azure",
         time: "1250hrs",
     }
