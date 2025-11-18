@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
 import './Slider.css';
-
+import {Contactos} from "../../Data/lib.js";
 export const MailJs2 = ({ index, item }) => {
   
   const [valueName, setVname] = useState("");
@@ -85,50 +85,9 @@ export const MailJs2 = ({ index, item }) => {
           <picture className='pictureStyle'>
             {valueName ? <p>{valueName}</p> : <img src={item.img} alt="" />}
           </picture>
-          {item.type === "text" ? (
-            <input
-              id="user_name"
-              name="user_name"
-              placeholder="Nombre..."
-              aria-invalid={errors.user_name ? "true" : "false"}
-              aria-errormessage="username-error-message"
-              autoComplete="username"
-              className={errors.user_name ? 'error' : 'inputStyle'}
-              onChange={handleChange}
-              type="text"
-              value={formState.user_name}
-            />
-          ) : item.type === "email" ? (
-            <input
-              id="user_email"
-              name="user_email"
-              placeholder="Correo..."
-              aria-invalid={errors.user_email ? "true" : "false"}
-              aria-errormessage="email-error-message"
-              autoComplete="email"
-              className={errors.user_email ? 'error' : 'inputStyle'}
-              value={formState.user_email}
-              onChange={handleChange}
-              type="email"
-            />
-          ) : item.type === "textarea" ? (
-            <textarea
-              id="user_message"
-              name="user_message"
-              placeholder="Mensaje..."
-              aria-invalid={errors.user_message ? "true" : "false"}
-              aria-errormessage="message-error-message"
-              autoComplete="message"
-              className={errors.user_message ? 'error' : 'textareaStyle'}
-              value={formState.user_message}
-              onChange={handleChange}
-            />
-          ) : item.type === "submit" ? (
-            <button className='buttonStyle'>Enviar</button>
-          ) : null}
+       
         </div>
-        <div></div>
-        <div></div>
+      
         <div>{item.duration}</div>
       </form>
     </div>

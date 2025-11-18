@@ -1,6 +1,45 @@
+import { c as createComponent, r as renderTemplate, a as addAttribute, b as createAstro, d as renderComponent, f as renderHead, g as renderSlot, m as maybeRenderHead } from './astro/server_BCEGUHAj.mjs';
+import 'kleur/colors';
+import 'clsx';
+/* empty css                        */
 
+const $$Astro$2 = createAstro();
+const $$ViewTransitions = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$ViewTransitions;
+  const { fallback = "animate" } = Astro2.props;
+  return renderTemplate`<meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback"${addAttribute(fallback, "content")}>`;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/node_modules/astro/components/ViewTransitions.astro", void 0);
 
-export const Information = [
+const $$Astro$1 = createAstro();
+const $$Layout = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$Layout;
+  const { title } = Astro2.props;
+  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title>${renderComponent($$result, "ViewTransitions", $$ViewTransitions, { "fallback": "none" })}${renderHead()}</head> <body> ${renderSlot($$result, $$slots["default"])} </body></html>`;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/layouts/Layout.astro", void 0);
+
+const $$Home = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-uzkvznr5><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z" data-astro-cid-uzkvznr5></path></svg> `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/Icons/Home.astro", void 0);
+
+const $$Search = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-7gvu4rio><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z" data-astro-cid-7gvu4rio></path></svg> `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/Icons/Search.astro", void 0);
+
+const $$Navigator = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<div class="navegator" data-astro-cid-ldwxwdsj> <ul data-astro-cid-ldwxwdsj> <a href="./" data-astro-cid-ldwxwdsj> <li data-astro-cid-ldwxwdsj> ${renderComponent($$result, "Home", $$Home, { "data-astro-cid-ldwxwdsj": true })} <p id="search-text" data-astro-cid-ldwxwdsj>Inicio</p> </li> </a> <a data-astro-cid-ldwxwdsj> <li id="search-li" data-astro-cid-ldwxwdsj> ${renderComponent($$result, "Search", $$Search, { "data-astro-cid-ldwxwdsj": true })} <p id="search-text-search" data-astro-cid-ldwxwdsj>Buscar</p> <input id="search-input" type="search" placeholder="Buscar" data-astro-cid-ldwxwdsj> </li> </a> </ul> </div>  `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/components/Navigator.astro", void 0);
+
+const $$Biblioteca = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-kprr22id><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z" data-astro-cid-kprr22id></path></svg> `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/Icons/Biblioteca.astro", void 0);
+
+const $$AsideList = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<ul data-astro-cid-kxnnk3ty> <li data-astro-cid-kxnnk3ty> ${renderComponent($$result, "Biblioteca", $$Biblioteca, { "data-astro-cid-kxnnk3ty": true })} <a href="#" id="aBiblio" data-astro-cid-kxnnk3ty>Biblioteca</a> </li> </ul> `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/components/AsideList.astro", void 0);
+
+const Information = [
   {
     id: '1',
     title: "Contacto",
@@ -44,7 +83,7 @@ export const Information = [
     imageUrl: "./feature.jpg",
   }
 ];
-export const Skills = [
+const Skills = [
   {
       id: '1',
       title: "HTML",
@@ -76,7 +115,7 @@ export const Skills = [
       id: '4',
       title: "Python",
       description: "lenguaje de programación para IA",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png",
+      imageUrl: "https://i2o.scdn.co/image/ab67706c0000cfa320f01f28b8e9f8df357957df",
       album: "back-end",
      
   
@@ -128,7 +167,7 @@ export const Skills = [
       id: '10',
       title: "Laravel",
       description: "framework de PHP",
-      imageUrl: "https://as1.ftcdn.net/jpg/05/83/61/64/1000_F_583616421_I2gICTJCaqquYwXvNJPWIvcxyJcIqT3J.jpg",
+      imageUrl: "https://pbs.twimg.com/profile_images/1783560208704241664/8skfbzIV_400x400.jpg",
       album: "back-end",
   }
   ,
@@ -143,7 +182,7 @@ export const Skills = [
     id: '12',
     title: "MongoDB",
     description: "base de datos NoSQL",
-    imageUrl: "https://images.icon-icons.com/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
+    imageUrl: "https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png",
     album: "bbdd",
 }
 ,{
@@ -177,7 +216,7 @@ export const Skills = [
   ];
 
 
-  export const Projects = [
+  const Projects = [
     {
         id: '1',
         title: "AfrooBook",
@@ -203,7 +242,7 @@ export const Skills = [
         id: '3',
         title: "Detector de Mensajes de Odio",
         description: "Modelo de IA para detectar mensajes de odio",
-        imageUrl: "https://i.scdn.co/image/ab67616d00001e0246b6026ecb5e2c1df32e10e9",
+        imageUrl: "https://i2o.scdn.co/image/ab67706c0000cfa35f130c3668ccc18e89a720c8",
         album: "python, machine learning",
         time: "2:30",
         github: "https://github.com/AI-School-F5-P2/NLP_detector_mensajes_odio.git",
@@ -303,34 +342,18 @@ export const Skills = [
     ];
 
     
-  export const Education = [
-      {
-        id: '1',
-        title: "FP Ies clara del rey dual",
-        description: "Dam + daw",
-        imageUrl: "https://pbs.twimg.com/profile_images/1011370492157136897/GOwqqa3H.jpg",
-        album: "html, css, js, WordPress",
-        time: "2000hrs",
-    },
-      {
-        id: '2',
-        title: "Programacion Orientada a objetos",
-        description: "Certificado de profesionalidad N.3",
-        imageUrl: "https://cursoscastraining.es/wp-content/uploads/2025/07/featured-image-cas-training-2025.png",
-        album: "html, css, js, WordPress",
-        time: "500hrs",
-    },
+  const Education = [
     {
-        id: '3',
-        title: "Confeccion y publicacion de paginas web",
+        id: '1',
+        title: "Desarollo Web",
         description: "Certificado de profesionalidad N.2",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk3UsxStyorODVsS1AV3WnLLZktLD9PPobxQ&s",
+        imageUrl: "https://www.mostolesdesarrollo.es/images/logo-mostoles-desarrollo.png",
         album: "html, css, js, WordPress",
         time: "500hrs",
     }
     ,
     {
-        id: '4',
+        id: '2',
         title: "Bootcamp Microsoft IA",
         description: "Ingeniero de Datos, Analista de Datos, Desarrollador de IA",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyqFikwQjZKCRY9hUsF7eP5bB_A7dIB9Ruug&s",
@@ -339,7 +362,7 @@ export const Skills = [
     }
     ,
     {
-        id: '5',
+        id: '3',
         title: "42 Madrid - Fundación Telefónica",
         description: "Programación en C",
         imageUrl: "https://i.scdn.co/image/ab67616d00001e02fe23dd528684203b1b2eb754",
@@ -348,7 +371,7 @@ export const Skills = [
     }
     ,
     {
-        id: '6',
+        id: '4',
         title: "Bootcamp Full Stack Developer",
         description: "Desarrollo de aplicaciones web y móviles",
         imageUrl: "https://larueca.info/wp-content/uploads/2021/08/circuloamarillofondo.png",
@@ -357,7 +380,7 @@ export const Skills = [
     
     },
     {
-        id: '7',
+        id: '4',
         title: "Bachillerato",
         description: "Ciencias de la Computación",
         imageUrl: "https://sociedadtecnologiaydeontologia.wordpress.com/wp-content/uploads/2019/01/logotipo_ipn.png",
@@ -368,7 +391,7 @@ export const Skills = [
     
     ];
 
-    export const Cantantes = [
+    const Cantantes = [
         {
             id: '1',
             title: "RCHP",
@@ -401,19 +424,8 @@ export const Skills = [
         
         ];
 
-export const Contactos = [
-    {
-        id: '1',
-        title: "erick.alexis.venegas@gmail.com"
-    },
-    {
-        id: '2',
-        title: "+34 624 642 391"
-    }
-]
 
-
-export const ContactoData = [
+const ContactoData = [
             {
                 id: '1',
                 type: "text",
@@ -444,3 +456,41 @@ export const ContactoData = [
             }
             
             ];
+
+const $$Astro = createAstro();
+const $$AsideLibrary = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$AsideLibrary;
+  Astro2.props;
+  function GetTitle(title) {
+    if (title === "Nasa")
+      return "Hackathon";
+    else if (title === "Habilidades")
+      return "Album";
+    else if (title === "Proyectos")
+      return "Album";
+    else if (title === "Educacion")
+      return "Album";
+    else if (title === "Experiencia")
+      return "Album";
+    else if (title === "Conoceme")
+      return "Artista";
+    else
+      return "Album";
+  }
+  return renderTemplate`${Information.map((item) => renderTemplate`${maybeRenderHead()}<li class="liListsongs" data-astro-cid-752lpjmo><a${addAttribute(`./${item.title}`, "href")} data-astro-cid-752lpjmo><div class="cover" data-astro-cid-752lpjmo><img${addAttribute(`./${item.title}.jpg`, "src")} alt="varios lenguajes de programacion" data-astro-cid-752lpjmo></div><div class="info" data-astro-cid-752lpjmo><h5 data-astro-cid-752lpjmo>${item.title}</h5><p data-astro-cid-752lpjmo>${GetTitle(item.title)}</p></div></a></li>`)}`;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/components/AsideLibrary.astro", void 0);
+
+const $$Thumb = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<div class="player-container" data-astro-cid-ly2dno6g> <button class="play-button" data-astro-cid-ly2dno6g> <svg class="svg-special" role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-astro-cid-ly2dno6g><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z" data-astro-cid-ly2dno6g></path></svg> </button> <div class="progress-container" data-astro-cid-ly2dno6g> <span class="progress-time" data-astro-cid-ly2dno6g>0:00</span> <div class="progress-bar" data-astro-cid-ly2dno6g> <div class="progress-bar-inner" style="width: 0%;" data-astro-cid-ly2dno6g></div> <div class="progress-thumb" style="left: 0%;" data-astro-cid-ly2dno6g></div> </div> <span class="progress-time" data-astro-cid-ly2dno6g>0:00</span> </div> <audio data-astro-cid-ly2dno6g></audio> </div> `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/components/Thumb.astro", void 0);
+
+const $$Volumen = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<svg class="svg-special" fill="currentColor" role="presentation" height="16" width="16" aria-hidden="true" aria-label="Volumen alto" id="volume-icon" viewBox="0 0 16 16"> <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"></path> <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path> </svg>`;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/Icons/Volumen.astro", void 0);
+
+const $$VolumenControl = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<div class="volume-control" data-astro-cid-nd3jds23> <button class="volume-button" data-astro-cid-nd3jds23> ${renderComponent($$result, "Volumen", $$Volumen, { "data-astro-cid-nd3jds23": true })} </button> <div class="slider-container" data-astro-cid-nd3jds23> <input type="range" min="0" max="100" value="50" class="slider" id="myRange" data-astro-cid-nd3jds23> <!-- <div class="slider-bar" style="width: 44%;"></div> --> <!-- <div class="slider-thumb" style="left: 44%;"></div> --> </div> </div> `;
+}, "C:/Users/Alexis/Desktop/proyectos/spotify-porfolio/src/components/VolumenControl.astro", void 0);
+
+export { $$Navigator as $, Cantantes as C, Education as E, Information as I, Projects as P, Skills as S, ContactoData as a, $$AsideList as b, $$AsideLibrary as c, $$Thumb as d, $$VolumenControl as e, $$Layout as f };
