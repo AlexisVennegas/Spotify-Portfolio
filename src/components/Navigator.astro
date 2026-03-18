@@ -9,19 +9,26 @@ import Search from '../Icons/Search.astro';
         <a href="./">
             <li>
                 <Home  />
-                <p id="search-text" >Inicio</p>
+           <p class="nav-text home">Inicio</p>
+
             </li>
         </a>
-        <a>
-            <li id="search-li">
+            <li class="search-li">
                 <Search />
-                <p id="search-text-search" >Buscar</p>
-                <input id="search-input" type="search" placeholder="Buscar" />
+             <p class="nav-text-search">Buscar</p>
+                <input class="search-input hidden" type="search" placeholder="Buscar" />
             </li>
-        </a>
+     
     </ul>
 </div>
 <style>
+    .nav-text-search {
+        text-decoration: none;
+        color: rgb(161 161 170);
+        font-weight: 500;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+    }
     .navegator {
 		width: 334px;
 		height: 120px;
@@ -52,10 +59,16 @@ import Search from '../Icons/Search.astro';
         }    
         
     }
-    #search-input {
+    .search-li {
+        position: relative;
+    }
+
+    .search-input {
         display: none;
         background-color: transparent;
         color: #fff;
+        position: absolute;
+        right: 0;
         border: none;
         font-size: 17px;
         font-family: 'Poppins', sans-serif;
@@ -63,36 +76,31 @@ import Search from '../Icons/Search.astro';
         outline: none;
     }   
     /* quitamos todos los hover con outline o background white al input*/
-    #search-input:hover {
+    .search-input:hover {
         background-color: transparent !important;
         outline: none !important;
     }
    
 </style>
 <script>
-    const searchLi = document.getElementById('search-li');
-    const searchInput = document.getElementById('search-input');
-    const searchText = document.getElementById('search-text-search');
-    const ul = document.querySelector(".list-songs");
+document.addEventListener('DOMContentLoaded', () => {
+  const searchLi = document.querySelector('.search-li');
+    const searchInput = searchLi.querySelector('.search-input');
+    const searchText = searchLi.querySelector('.nav-text-search');
 
-    // evento button search
-    searchLi.addEventListener('click', (e) => {
+    searchLi.addEventListener('click', () => {
         searchInput.style.display = 'block';
         searchText.style.display = 'none';
-        
-    })
-   // vamos a filtrar la ul dependiendo lo que escriban en el input
+    });
+
     searchInput.addEventListener('keyup', (e) => {
         const term = e.target.value.toLowerCase();
         const listSongs = document.querySelectorAll('.liListsongs');
-        Array.from(listSongs).forEach((listSongs) => {
-            const title = listSongs.textContent;
-            if (title.toLowerCase().indexOf(term) != -1) {
-                listSongs.style.display = 'block';
-            } else {
-                listSongs.style.display = 'none';
-            }
-        })
-    })  
 
+        listSongs.forEach((song) => {
+            const title = song.textContent;
+            song.style.display = title.toLowerCase().includes(term) ? 'block' : 'none';
+        });
+    });
+});
 </script>
