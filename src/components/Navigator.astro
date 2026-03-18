@@ -82,10 +82,14 @@ import Search from '../Icons/Search.astro';
     }
    
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const searchLi = document.querySelector('.search-li');
+<script is:inline>
+
+
+document.addEventListener('astro:after-swap', () => {
+    //const searchLi = document.querySelector('.search-li');
+    const searchLi = document.querySelectorAll('.search-li')[0];
     const searchInput = searchLi.querySelector('.search-input');
+ 
     const searchText = searchLi.querySelector('.nav-text-search');
 
     searchLi.addEventListener('click', () => {
@@ -93,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchText.style.display = 'none';
     });
 
+    
     searchInput.addEventListener('keyup', (e) => {
         const term = e.target.value.toLowerCase();
         const listSongs = document.querySelectorAll('.liListsongs');
