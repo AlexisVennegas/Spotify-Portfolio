@@ -431,48 +431,28 @@ const showIcon = id === "Nasa" ? "none" : "flex";
 		margin: 0 0 0px 10px 
 	}
 </style>
-<script>
-    const searchLi = document.getElementById('search-li');
-    const searchInput = document.getElementById('search-input');
-    const searchText = document.getElementById('search-text');
-    const ul = document.querySelector(".list-songs");
+<script is:inline>
 
     
 	// buttons para la seleccion de lista de habilidades 
-	const front_button = document.getElementById('first-select-button');
-	const back_button = document.getElementById('second-select-button');
-	const sql_buttons = document.getElementById('third-select-button');
-	const reset_button = document.querySelector('.play-button');
+	const front_button = document.querySelectorAll('.first-select-button');
+	const back_button = document.querySelectorAll('.second-select-button');
+	const sql_buttons = document.querySelectorAll('.third-select-button');
+	const reset_button = document.querySelectorAll('.play-button');
 	
-	// evento button search
-    searchLi.addEventListener('click', (e) => {
-        searchInput.style.display = 'block';
-        searchText.style.display = 'none';
-    })
-   // vamos a filtrar la ul dependiendo lo que escriban en el input
-    searchInput.addEventListener('keyup', (e) => {
-        const term = e.target.value.toLowerCase();
-        const listSongs = document.querySelectorAll('.liListsongs');
-        Array.from(listSongs).forEach((listSongs) => {
-            const title = listSongs.textContent;
-            if (title.toLowerCase().indexOf(term) != -1) {
-                listSongs.style.display = 'block';
-            } else {
-                listSongs.style.display = 'none';
-            }
-        })
-    })  
 
-	front_button.addEventListener('click', () => {
-		filterSongs('front-end');
+	front_button.forEach((button) => {z
+		button.addEventListener('astro:after-swap', () => {
+			filterSongs('front-end');
+		});
 	});
-	back_button.addEventListener('click', () => {
+	back_button.addEventListener('astro:after-swap', () => {
 		filterSongs('back-end');
 	});
-	sql_buttons.addEventListener('click', () => {
+	sql_buttons.addEventListener('astro:after-swap', () => {
 		filterSongs('bbdd');
 	});
-	reset_button.addEventListener('click', () => {
+	reset_button.addEventListener('astro:after-swap', () => {
 		filterSongs('reset');
 	});
 
